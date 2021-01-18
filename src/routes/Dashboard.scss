@@ -2,6 +2,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Fira+Code&display=swap');
 
+.avatar__container {
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-end;
+
+  div {
+    border: 3px solid vars.$blue;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 5px vars.$blue;
+  }
+}
+
 .page__container {
   display: flex !important;
   height: 100vh;
@@ -20,21 +32,20 @@
     text-align: justify;
   }
 }
-
-.dashboard__subtitle {
-  h1 {
-    font-family: 'Dr Sugiyama', cursive;
-    font-size: 4rem;
-    filter: drop-shadow(0 0 7px vars.$pink);
-  }
-
-  h2 {
+.page__grid {
+  .dashboard__subtitle {
     font-family: 'Fira Code', monospace;
     text-decoration: underline;
   }
 }
 
-.text--pronounced {
+h1 {
+  font-family: 'Dr Sugiyama', cursive;
+  font-size: 4rem;
+  filter: drop-shadow(0 0 7px vars.$pink);
+}
+
+span.text--pronounced {
   font-weight: bold;
 }
 
@@ -42,11 +53,11 @@
   border: none !important;
 }
 
-.motivation__article {
+article.motivation__article {
   margin: 2rem 7rem;
 }
 
-.motivation__article .newspaper__column {
+article.motivation__article .newspaper__column {
   padding: 2rem 3rem;
   border-radius: 1rem;
   background-color: vars.$pink;

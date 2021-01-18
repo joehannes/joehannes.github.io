@@ -4,22 +4,10 @@ import {
   Grid,
   Segment,
 } from 'semantic-ui-react';
-import VideoLooper from 'react-video-looper';
 
-import CodersRankActivity from '@codersrank/activity';
+import Welcome from '../pages/Welcome';
 
 import './Dashboard.scss';
-// import wavingVid from '../assets/vid/waving.webm';
-
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'codersrank-activity': any;
-    }
-  }
-}
-
-window.customElements.define('codersrank-activity', CodersRankActivity as unknown as CustomElementConstructor);
 
 const Dashboard: FC = () => {
   let [hovered, setHovered] = useState(0);
@@ -29,44 +17,7 @@ const Dashboard: FC = () => {
       fluid
       className="page__container"
     >
-t     <Grid
-        verticalAlign='middle'
-        centered
-        container
-        className="page__grid"
-      >
-        <Grid.Row>
-          <Grid.Column
-            className="avatar__container"
-          >
-            <VideoLooper
-              start={0}
-              end={2}
-              width="128px"
-              height="128px"
-              source="/assets/vid/waving.webm"
-            />
-            <h1>joehannes</h1>
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row
-          stretched
-        >
-          <Grid.Column
-            textAlign="center"
-          >
-            <codersrank-activity
-              username="joehannes"
-              labels
-              legend
-              tooltip
-              branding={false}
-            >
-            </codersrank-activity>
-            <h2 className="dashboard__subtitle">Frontend Developer: React/Typescript</h2>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
+      <Welcome />
     </Container>
     <Container
       fluid

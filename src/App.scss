@@ -1,4 +1,4 @@
-@use "./theme.config" as color;
+@use "./theme.config" as vars;
 
 .page__container--position {
   position: absolute;
@@ -10,9 +10,23 @@
 }
 
 .page__container--color {
-  background: color.$pink;
-  background: radial-gradient(circle, rgba(color.$pink, 0.9) 0%, rgba(color.$black, 0.9) 90%);
+  background: vars.$pink;
+  background: radial-gradient(circle, rgba(vars.$pink, 0.9) 0%, rgba(vars.$black, 0.9) 90%);
   transition: background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s,
     opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s;
   transform: translate3d(0, 0, 0);
 }
+
+.dashboard__subtitle {
+  h1 {
+    font-family: 'Dr Sugiyama', cursive;
+    font-size: 4rem;
+    filter: drop-shadow(0 0 7px vars.$pink);
+  }
+
+  h2 {
+    font-family: 'Fira Code', monospace;
+    text-decoration: underline;
+  }
+}
+
