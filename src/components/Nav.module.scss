@@ -1,0 +1,15 @@
+.position {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  &> button:nth-child(2) {
+    pointer-events: none;
+    z-index: -1;
+    margin: -.7rem 0;
+    transform: translatex(-2px);
+  }
+}
+
