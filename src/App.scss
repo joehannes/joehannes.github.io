@@ -1,5 +1,7 @@
 @use "./theme.config" as vars;
 
+@import url('https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Fira+Code&display=swap');
+
 .page__container--position {
   position: absolute;
   top: 0;
@@ -30,3 +32,47 @@
   }
 }
 
+.page__container {
+  display: flex !important;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+
+  color: vars.$black;
+
+  &:nth-child(2) {
+    background: vars.$blue;
+    background: radial-gradient(circle, rgba(vars.$blue, 1) 0%, rgba(vars.$black, .9) 90%);
+
+    .motivation__article {
+      transition: transform .5s ease !important;
+      transform: scale3d(0.75, 0.75, 1) translateY(-5%);
+    }
+
+    &:hover .motivation__article {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  article > P {
+    text-align: justify;
+  }
+}
+
+.text--pronounced {
+  font-weight: bold;
+}
+
+.style__border--none {
+  border: none !important;
+}
+
+a {
+  color: vars.$black !important;
+  text-decoration: underline !important;
+
+  &:hover {
+    font-weight: bold;
+  }
+}
