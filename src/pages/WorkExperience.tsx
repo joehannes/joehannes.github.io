@@ -45,7 +45,7 @@ const WorkExperience: FC = () => {
               <Label color={job.icon.color as any} horizontal>
                 company size
               </Label>
-              <Rating icon='heart' defaultRating={1} maxRating={7} disabled />
+              <Rating icon='heart' defaultRating={job.size} maxRating={7} disabled />
             </Segment>
             <Segment basic className={styles.label}>
               <Label color={job.icon.color as any} horizontal>

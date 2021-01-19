@@ -12,6 +12,7 @@
   "title": "Senior Frontend Developer",
   "detail": "Remote Contract @Caribbean",
   "company": "Toool",
+  "size": 1,
   "description": {
     "industry": "insurance industry",
     "function": "PaaS for insurance brokers",
@@ -36,6 +37,7 @@
   "title": "Senior Sole Frontend Developer",
   "detail": "Remote Contract @Caribbean",
   "company": "Bambus",
+  "size": 1,
   "description": {
     "industry": "property/mortgage industry",
     "function": "prototype for customer aquisition",
@@ -46,4 +48,79 @@
   "assets": {
     "website": "https://bambus.io"
   }
-}]
+}, {
+  "style": {
+    "background": "#00003f",
+    "color": "#ffffff"
+  },
+  "date": "08/2017 - 01/2018",
+  "icon": {
+    "name": "basketball ball",
+    "color": "orange"
+  },
+  "tags": ["React", "Typescript", "Redux", "Class Components", "semantic-ui", "Sass"],
+  "title": "Quasi-CTO",
+  "detail": "Accelerator @Lausanne/Remote Contract @Caribbean",
+  "company": "Sportskred",
+  "size": 1,
+  "description": {
+    "industry": "social influencer/sports",
+    "function": "prototyping",
+    "size": "startup; small Team of about 3 people",
+    "method": "freestyle; remote online collaboration and communication",
+    "focus": "jack of all trades @frontend; advisor to CEO/COO;"
+  },
+  "assets": {
+    "website": "https://sportskred.com"
+  }
+}, {
+  "style": {
+    "background": "#bce4fa",
+    "color": "#000000"
+  },
+  "date": "09/2016 - 03/2017",
+  "icon": {
+    "name": "euro",
+    "color": "red"
+  },
+  "tags": ["AngularJS", "Typescript", "Gulp", "Jenkins", "ITCSS", "Sass", "Bootstrap"],
+  "title": "Javascript Consultant",
+  "detail": "In Office Contract @Vienna",
+  "company": "Sparkasse IT-Solutions",
+  "size": 6,
+  "description": {
+    "industry": "FinTech",
+    "function": "bug squashing, repair, development",
+    "size": "huge; medium sized team of about 8 people",
+    "method": "daily scrum; kanban boards; game card group estimations",
+    "focus": "fix a broken app; find needle in haystack"
+  },
+  "assets": {
+    "website": "https://www.s-itsolutions.at"
+  }
+}, {
+  "style": {
+    "background": "#f5ab19",
+    "color": "#ffffff"
+  },
+  "date": "08/2014 - 01/2015",
+  "icon": {
+    "name": "microphone",
+    "color": "grey"
+  },
+  "tags": ["AngularJS", "Coffeescript", "Angular-Clazz", "Sass", "Yeoman", "Sails.js", "bourbon", "Shell-Scripting", "d3.js", "JsSIP", "WebRTC"],
+  "title": "Senior Frontend Developer",
+  "detail": "remote contract @Caribbean",
+  "company": "Zenoradio",
+  "size": 2,
+  "description": {
+    "industry": "Radio/Digital Transformation",
+    "function": "prototyping",
+    "size": "at the time small; distributed small agile team",
+    "method": "agile; close cooperation with chief backender",
+    "focus": "dashboard for the digital transformation of terrestrial radio-shows; WebRTC integration; audio stream manipulation;"
+  },
+  "assets": {
+    "website": "https://zenoradio.com"
+  }
+} ]

@@ -4,6 +4,7 @@
   left: 2rem;
   display: flex;
   flex-direction: column;
+  z-index: 10;
 
   &> button:nth-child(2) {
     pointer-events: none;
