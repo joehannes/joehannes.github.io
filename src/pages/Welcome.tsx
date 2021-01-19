@@ -1,6 +1,5 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import {
-  Container,
   Segment,
 } from 'semantic-ui-react';
 import VideoLooper from 'react-video-looper';

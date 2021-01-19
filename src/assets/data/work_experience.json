@@ -1,0 +1,49 @@
+[{
+  "style": {
+    "background": "#46bde8",
+    "color": "#ffffff"
+  },
+  "date": "12/2018 - 09/2019",
+  "icon": {
+    "name": "certificate",
+    "color": "orange"
+  },
+  "tags": ["React", "Typescript", "Redux", "Class Components", "Redux-Saga", "Sass"],
+  "title": "Senior Frontend Developer",
+  "detail": "Remote Contract @Caribbean",
+  "company": "Toool",
+  "description": {
+    "industry": "insurance industry",
+    "function": "PaaS for insurance brokers",
+    "size": "startup; small Team of about 5 developers",
+    "method": "agile; remote online collaboration and communication",
+    "focus": "dynamic form components for individual insurance contracts"
+  },
+  "assets": {
+    "website": "https://versicherungsbutler.at"
+  }
+}, {
+  "style": {
+    "background": "#E06C9F",
+    "color": "#000000"
+  },
+  "date": "03/2019 - 06/2019",
+  "icon": {
+    "name": "building",
+    "color": "violet"
+  },
+  "tags": ["React", "Typescript", "Redux", "Class Components", "Redux-Observables", "Sass", "prudencss", "rx-beacon", "google-analytics"],
+  "title": "Senior Sole Frontend Developer",
+  "detail": "Remote Contract @Caribbean",
+  "company": "Bambus",
+  "description": {
+    "industry": "property/mortgage industry",
+    "function": "prototype for customer aquisition",
+    "size": "startup; small Team of about 3 developers",
+    "method": "agile; remote online collaboration and communication",
+    "focus": "jack of all trades @frontend"
+  },
+  "assets": {
+    "website": "https://bambus.io"
+  }
+}]

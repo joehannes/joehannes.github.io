@@ -5,6 +5,7 @@ import {
 
 import Welcome from '../pages/Welcome';
 import Motivation from '../pages/Motivation';
+import WorkExperience from '../pages/WorkExperience';
 
 const Dashboard: FC = () => {
   return (<>
@@ -19,6 +20,12 @@ const Dashboard: FC = () => {
       className="page__container"
     >
       <Motivation />
+    </Container>
+    <Container
+      fluid
+      className="page__container"
+    >
+      <WorkExperience />
     </Container>
   </>);
 }
