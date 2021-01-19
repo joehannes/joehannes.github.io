@@ -4,24 +4,10 @@ import {
   Grid,
   Segment,
 } from 'semantic-ui-react';
-import VideoLooper from 'react-video-looper';
 
-import CodersRankActivity from '@codersrank/activity';
+import styles from './Motivation.module.scss';
 
-import './Dashboard.scss';
-// import wavingVid from '../assets/vid/waving.webm';
-
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'codersrank-activity': any;
-    }
-  }
-}
-
-window.customElements.define('codersrank-activity', CodersRankActivity as unknown as CustomElementConstructor);
-
-const Dashboard: FC = () => {
+const Motivation: FC = () => {
   let [hovered, setHovered] = useState(0);
 
   return (<>
@@ -29,59 +15,16 @@ const Dashboard: FC = () => {
       fluid
       className="page__container"
     >
-t     <Grid
-        verticalAlign='middle'
-        centered
-        container
-        className="page__grid"
-      >
-        <Grid.Row>
-          <Grid.Column
-            className="avatar__container"
-          >
-            <VideoLooper
-              start={0}
-              end={2}
-              width="128px"
-              height="128px"
-              source="/assets/vid/waving.webm"
-            />
-            <h1>joehannes</h1>
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row
-          stretched
-        >
-          <Grid.Column
-            textAlign="center"
-          >
-            <codersrank-activity
-              username="joehannes"
-              labels
-              legend
-              tooltip
-              branding={false}
-            >
-            </codersrank-activity>
-            <h2 className="dashboard__subtitle">Frontend Developer: React/Typescript</h2>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Container>
-    <Container
-      fluid
-      className="page__container"
-    >
       <Segment.Group className="style__border--none">
-        <Segment basic textAlign="center">
+        <Segment basic textAlign="center" className="dashboard__subtitle">
           <h1>Motivation</h1>
         </Segment>
         <Segment basic>
-          <article className="motivation__article">
+          <article className={styles.motivation__article}>
             <Grid divided>
               <Grid.Row columns={4}>
                 <Grid.Column
-                  className={`newspaper__column ${hovered === 1 ? 'active' : ''} ${hovered !== 0 && hovered !== 1 ? 'inactive' : ''}`}
+                  className={`${styles.newspaper__column} dashboard__subtitle ${hovered === 1 ? styles.active : ''} ${hovered !== 0 && hovered !== 1 ? styles.inactive : ''}`}
                   onMouseEnter={() => setHovered(1)}
                   onMouseLeave={() => setHovered(0)}
                 >
@@ -99,7 +42,7 @@ t     <Grid
                     and started out as a Flasher.</p>
                 </Grid.Column>
                 <Grid.Column
-                  className={`newspaper__column ${hovered === 2 ? 'active' : ''} ${hovered !== 0 && hovered !== 2 ? 'inactive' : ''}`}
+                  className={`${styles.newspaper__column} dashboard__subtitle ${hovered === 2 ? styles.active : ''} ${hovered !== 0 && hovered !== 2 ? styles.inactive : ''}`}
                   onMouseEnter={() => setHovered(2)}
                   onMouseLeave={() => setHovered(0)}
                 >
@@ -115,7 +58,7 @@ t     <Grid
                   </p>
                 </Grid.Column>
                 <Grid.Column
-                  className={`newspaper__column ${hovered === 3 ? 'active' : ''} ${hovered !== 0 && hovered !== 3 ? 'inactive' : ''}`}
+                  className={`${styles.newspaper__column} dashboard__subtitle ${hovered === 3 ? styles.active : ''} ${hovered !== 0 && hovered !== 3 ? styles.inactive : ''}`}
                   onMouseEnter={() =>setHovered(3)}
                   onMouseLeave={() =>setHovered(0)}
                 ><h4>Relevant Experience</h4>
@@ -125,7 +68,7 @@ t     <Grid
                   </p>
                 </Grid.Column>
                 <Grid.Column
-                  className={`newspaper__column ${hovered === 4 ? 'active' : ''} ${hovered !== 0 && hovered !== 4 ? 'inactive' : ''}`}
+                  className={`${styles.newspaper__column} dashboard__subtitle ${hovered === 4 ? styles.active : ''} ${hovered !== 0 && hovered !== 4 ? styles.inactive : ''}`}
                   onMouseEnter={() => setHovered(4)}
                   onMouseLeave={() => setHovered(0)}
                 >
@@ -148,4 +91,4 @@ t     <Grid
   </>);
 }
 
-export default Dashboard;
+export default Motivation;

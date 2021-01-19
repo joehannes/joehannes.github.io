@@ -9,7 +9,7 @@ import {
 } from 'semantic-ui-react';
 
 import Nav from './components/Nav';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './routes/Dashboard';
 
 import './App.scss';
 

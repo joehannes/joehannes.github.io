@@ -1,0 +1,19 @@
+@use "../theme.config.scss" as vars;
+
+.avatar__container {
+display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    border: 3px solid vars.$blue;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 5px vars.$blue;
+  }
+}
+
+.layout {
+  width: 73vw;
+  border: none !important;
+  box-shadow: unset !important;
+}
