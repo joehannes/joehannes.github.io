@@ -280,7 +280,7 @@
   },
   "date": "01/2009 - 01/2010",
   "icon": {
-    "name": "chain",
+    "name": "tty",
     "color": "white"
   },
   "tags": ["PHP", "SQL", "Oracle", "Ruby", "Shell"],

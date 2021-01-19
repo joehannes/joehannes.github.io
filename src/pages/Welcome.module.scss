@@ -1,9 +1,14 @@
 @use "../theme.config.scss" as vars;
 
 .avatar__container {
-display: flex !important;
+  display: flex !important;
   align-items: center;
   justify-content: center;
+
+  img {
+    width: 128px !important;
+    height: 128px !important;
+  }
 
   div {
     border: 3px solid vars.$blue;

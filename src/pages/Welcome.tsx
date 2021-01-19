@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
 import {
+  Image,
+  Reveal,
   Segment,
 } from 'semantic-ui-react';
 import VideoLooper from 'react-video-looper';
@@ -28,13 +30,20 @@ const Welcome: FC = () => {
         basic
         className={styles.avatar__container}
       >
-        <VideoLooper
-          start={0}
-          end={2}
-          width="128px"
-          height="128px"
-          source="/assets/vid/waving.webm"
-        />
+        <Reveal animated="move up">
+          <Reveal.Content visible>
+            <Image src="/assets/img/joevatar.jpg" circular size="tiny" />
+          </Reveal.Content>
+          <Reveal.Content hidden>
+            <VideoLooper
+              start={0}
+              end={2}
+              width="128px"
+              height="128px"
+              source="/assets/vid/waving.webm"
+            />
+          </Reveal.Content>
+        </Reveal>
       </Segment>
       <Segment
         basic

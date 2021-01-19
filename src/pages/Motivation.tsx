@@ -60,7 +60,9 @@ const Motivation: FC = () => {
               ><h4>Relevant Experience</h4>
                 <p>
               I got about <span className="text--pronounced">3 years of experience in React and a bit more in Typescript</span>.
-                            Also, while I generally speaking might boast of <span className="text--pronounced">considerable international experience</span> - having worked in teams in London, Amsterdam, Berlin and Vienna - I already added about <span className="text--pronounced">3 years of fully remote experience</span> to my portfolio.</p><p>Most of my remote experience I have been working from a Caribbean retreat, which is where I feel quite comfortable. I can manage <span className="text--pronounced">100% office hour overlap with the Americas</span> and <span className="text--pronounced">5 hours with CET</span> - in a sustainable manner.
+                            Also, while I generally speaking might boast of <span className="text--pronounced">considerable international experience</span> - having worked in teams in London, Amsterdam, Berlin and Vienna - I already added about <span className="text--pronounced">3 years of fully remote experience</span> to my portfolio.</p><p>Most of my remote experience I have been working from a Caribbean retreat.
+                </p><p>
+                  Currently and for the forseeable future I'm based in Austria. I am open to contract work as well as permanent positions all over the world, preferring fully remote positions.
                 </p>
               </Grid.Column>
               <Grid.Column
