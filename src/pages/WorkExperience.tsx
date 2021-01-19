@@ -72,9 +72,9 @@ const WorkExperience: FC = () => {
                 </Label>
               ))}
             </Segment>
-            <Segment basic>
+            {job.assets.website && (<Segment basic>
               <Button icon="world" href={job.assets.website} as="a"/>
-            </Segment>
+            </Segment>)}
           </Segment.Group>
         </TimelineElement>
       ))}

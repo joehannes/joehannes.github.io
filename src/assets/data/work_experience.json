@@ -112,15 +112,189 @@
   "title": "Senior Frontend Developer",
   "detail": "remote contract @Caribbean",
   "company": "Zenoradio",
-  "size": 2,
+  "size": 3,
   "description": {
     "industry": "Radio/Digital Transformation",
     "function": "prototyping",
-    "size": "at the time small; distributed small agile team",
+    "size": "at the time small to medium; distributed small agile team",
     "method": "agile; close cooperation with chief backender",
     "focus": "dashboard for the digital transformation of terrestrial radio-shows; WebRTC integration; audio stream manipulation;"
   },
   "assets": {
     "website": "https://zenoradio.com"
   }
-} ]
+}, {
+  "style": {
+    "background": "#d03030",
+    "color": "#ffffff"
+  },
+  "date": "01/2014 - 05/2014",
+  "icon": {
+    "name": "star",
+    "color": "grey"
+  },
+  "tags": ["AngularJS", "Coffeescript", "Angular-Clazz", "Sass", "Yeoman"],
+  "title": "Frontend Lead Developer",
+  "detail": "in office contract @london",
+  "company": "Rockstar Dev",
+  "size": 1,
+  "description": {
+    "industry": "Web Development",
+    "function": "frontend implementation greenfield student project",
+    "size": "at the time very small startup;",
+    "method": "agile; close cooperation with Backend Lead and CTO",
+    "focus": "implementing a student exchange platform for the biggest international student org"
+  },
+  "assets": {
+    "website": "https://jonathanfren.com"
+  }
+}, {
+  "style": {
+    "background": "#c70f80",
+    "color": "#ffffff"
+  },
+  "date": "09/2013 - 01/2014",
+  "icon": {
+    "name": "searchengin",
+    "color": "grey"
+  },
+  "tags": ["AngularJS", "Javascript", "Coffeescript", "d3.js", "Yeoman"],
+  "title": "Senior Javascript Developer",
+  "detail": "in office contract @Vienna; later remote contract @Caribbean",
+  "company": "Ciuvo",
+  "size": 2,
+  "description": {
+    "industry": "Web Scraping Engine; Browser Plugin",
+    "function": "frontend implementations; dashboard analytics",
+    "size": "small startup",
+    "method": "agile; close cooperation with COO and backenders",
+    "focus": "implementing an analytics dashboard and scraping engine frontend"
+  },
+  "assets": {
+    "website": "https://ciuvo.com"
+  }
+}, {
+  "style": {
+    "background": "#c12121",
+    "color": "#ffffff"
+  },
+  "date": "03/2013 - 07/2013",
+  "icon": {
+    "name": "euro",
+    "color": "blue"
+  },
+  "tags": ["AngularJS", "Backbase Portal", "Bootstrap", "JQuery", "widgets"],
+  "title": "Javascript Developer",
+  "detail": "in office contract @Amsterdam",
+  "company": "Backbase",
+  "size": 4,
+  "description": {
+    "industry": "FinTech",
+    "function": "financial widgets; prototyping",
+    "size": "medium to large business",
+    "method": "agile",
+    "focus": "sprint efforts in developing widgets and prototyping in R&D"
+  },
+  "assets": {
+    "website": "https://backbase.com"
+  }
+}, {
+  "style": {
+    "background": "#97c127",
+    "color": "#000000"
+  },
+  "date": "07/2012 - 02/2013",
+  "icon": {
+    "name": "table",
+    "color": "white"
+  },
+  "tags": ["JavascriptMVC", "Javascript", "Coffeescript", "Sugar.js", "d3.js"],
+  "title": "Javascript Developer",
+  "detail": "in office contract @Vienna",
+  "company": "Nexxar",
+  "size": 3,
+  "description": {
+    "industry": "Digital Transformation of Reports",
+    "function": "refactoring a flash app to javascript",
+    "size": "medium sized business",
+    "method": "freestyle",
+    "focus": "charting solutions; porting flash software"
+  },
+  "assets": {
+    "website": "https://nexxar.com"
+  }
+}, {
+  "style": {
+    "background": "#004178",
+    "color": "#000000"
+  },
+  "date": "01/2012 - 07/2012",
+  "icon": {
+    "name": "gavel",
+    "color": "white"
+  },
+  "tags": ["Javascript", "jQuery", "custom jQuery widgets"],
+  "title": "Javascript Developer",
+  "detail": "in office contract @Linz",
+  "company": "Fabasoft",
+  "size": 5,
+  "description": {
+    "industry": "E-Government",
+    "function": "junior widget developer",
+    "size": "large sized business; medium sized team",
+    "method": "scrum",
+    "focus": "developing on demand custom jQuery widgets for seamless integration into main software"
+  },
+  "assets": {
+    "website": "https://fabasoft.com"
+  }
+}, {
+  "style": {
+    "background": "#138C8F",
+    "color": "#ffffff"
+  },
+  "date": "01/2011 - 12/2011",
+  "icon": {
+    "name": "chain",
+    "color": "grey"
+  },
+  "tags": ["Groovy", "Grails", "Javascript", "jQuery", "prototype"],
+  "title": "Junior Fullstack Developer",
+  "detail": "in office contract @Oxford/UK",
+  "company": "HistoricFutures",
+  "size": 3,
+  "description": {
+    "industry": "Supply Chain Traceability",
+    "function": "daily tasks of a junior",
+    "size": "medium sized business; medium sized team",
+    "method": "freestyle with agile touch",
+    "focus": "mostly developing an AJAX-microsite for sustainable seafood certification"
+  },
+  "assets": {
+    "website": "http://historicfutures.com"
+  }
+},{
+  "style": {
+    "background": "#3030d0",
+    "color": "#000000"
+  },
+  "date": "01/2009 - 01/2010",
+  "icon": {
+    "name": "chain",
+    "color": "white"
+  },
+  "tags": ["PHP", "SQL", "Oracle", "Ruby", "Shell"],
+  "title": "Junior Backend Hackster",
+  "detail": "in office contract @Vienna",
+  "company": "Solution-X",
+  "size": 2,
+  "description": {
+    "industry": "Digital Transformation in Tourism",
+    "function": "issue ticker; tech backoffice support",
+    "size": "small sized business; no specific team forms",
+    "method": "freestyle",
+    "focus": "mostly hacking whatever micro-issue popped up"
+  },
+  "assets": {
+  }
+}  ]
