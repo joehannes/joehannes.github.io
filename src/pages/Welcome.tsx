@@ -9,7 +9,8 @@ import VideoLooper from 'react-video-looper';
 import CodersRankActivity from '@codersrank/activity';
 
 import styles from './Welcome.module.scss';
-// import wavingVid from '../assets/vid/waving.webm';
+
+import trumpetSound from '../assets/audio/elephant.mp3';
 
 declare global {
   namespace JSX {
@@ -22,6 +23,8 @@ declare global {
 window.customElements.define('codersrank-activity', CodersRankActivity as unknown as CustomElementConstructor);
 
 const Welcome: FC = () => {
+  let trumpHello = new Audio(trumpetSound);
+
   return (<>
     <Segment.Group
       className={styles.layout}
@@ -32,7 +35,7 @@ const Welcome: FC = () => {
       >
         <Reveal animated="move up">
           <Reveal.Content visible>
-            <Image src="/assets/img/joevatar.jpg" circular size="tiny" />
+            <Image onMouseEnter={() => trumpHello.play()} src="/assets/img/joevatar.jpg" circular size="tiny" />
           </Reveal.Content>
           <Reveal.Content hidden>
             <VideoLooper
