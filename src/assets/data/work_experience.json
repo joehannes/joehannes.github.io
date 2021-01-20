@@ -121,7 +121,7 @@
     "focus": "dashboard for the digital transformation of terrestrial radio-shows; WebRTC integration; audio stream manipulation;"
   },
   "assets": {
-    "website": "https://zenoradio.com"
+    "website": "https://zeno.fm"
   }
 }, {
   "style": {
@@ -146,7 +146,6 @@
     "focus": "implementing a student exchange platform for the biggest international student org"
   },
   "assets": {
-    "website": "https://jonathanfren.com"
   }
 }, {
   "style": {
@@ -206,7 +205,7 @@
   "date": "07/2012 - 02/2013",
   "icon": {
     "name": "table",
-    "color": "white"
+    "color": "grey"
   },
   "tags": ["JavascriptMVC", "Javascript", "Coffeescript", "Sugar.js", "d3.js"],
   "title": "Javascript Developer",
@@ -231,7 +230,7 @@
   "date": "01/2012 - 07/2012",
   "icon": {
     "name": "gavel",
-    "color": "white"
+    "color": "grey"
   },
   "tags": ["Javascript", "jQuery", "custom jQuery widgets"],
   "title": "Javascript Developer",
@@ -281,7 +280,7 @@
   "date": "01/2009 - 01/2010",
   "icon": {
     "name": "tty",
-    "color": "white"
+    "color": "grey"
   },
   "tags": ["PHP", "SQL", "Oracle", "Ruby", "Shell"],
   "title": "Junior Backend Hackster",

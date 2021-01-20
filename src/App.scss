@@ -1,7 +1,5 @@
 @use "./theme.config" as vars;
 
-@import url('https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Fira+Code&display=swap');
-
 .page__container--color {
   background: vars.$pink;
   background: radial-gradient(circle, rgba(vars.$pink, 0.9) 0%, rgba(vars.$black, 0.9) 90%);
@@ -86,4 +84,13 @@ a {
 
 .vertical-timeline-element-date {
   filter: drop-shadow(0 0 5px white);
+}
+
+nav ~ div {
+  width: 100vw !important;
+  height: 100vh !important;
+
+  &> div:last-child > div {
+    background-color: vars.$pink !important;
+  }
 }

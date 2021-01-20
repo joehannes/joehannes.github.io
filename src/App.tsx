@@ -4,9 +4,7 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import {
-  Container,
-} from 'semantic-ui-react';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 import Nav from './components/Nav';
 import Dashboard from './routes/Dashboard';
@@ -16,15 +14,12 @@ import './App.scss';
 function App() {
   return (
     <Router>
-      <Nav/>
+      <Nav />
       <Switch>
         <Route path="/">
-          <Container
-            className="page__container--position page__container--color"
-            fluid
-          >
+          <Scrollbars>
             <Dashboard/>
-          </Container>
+          </Scrollbars>
         </Route>
       </Switch>
     </Router>

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useRef, useState, useEffect } from 'react';
 import {
   Image,
   Reveal,
@@ -35,7 +35,11 @@ const Welcome: FC = () => {
       >
         <Reveal animated="move up">
           <Reveal.Content visible>
-            <Image onMouseEnter={() => trumpHello.play()} src="/assets/img/joevatar.jpg" circular size="tiny" />
+            <Image
+              onMouseEnter={() => trumpHello.play()}
+              src="/assets/img/joevatar.jpg"
+              circular size="tiny"
+            />
           </Reveal.Content>
           <Reveal.Content hidden>
             <VideoLooper

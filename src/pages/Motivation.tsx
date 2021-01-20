@@ -1,6 +1,5 @@
 import React, { FC, useState } from 'react';
 import {
-  Container,
   Grid,
   Segment,
 } from 'semantic-ui-react';
@@ -28,14 +27,14 @@ const Motivation: FC = () => {
                 <p>
                   I ❤ to code meaningful stuff.<br/>
                   I ❤ mathematics and useful visualizations, applications of algorithms and thoughtful presentations.
-                </p><p>
+                </p><br/>
                   I got my <span className="text--pronounced">degree/diploma</span>
                   <ul>
                     <li>in 2007</li>
                     <li>in Media Technology <br/>[Dipl.-Ing. (FH)],</li>
                     <li>at the University of Applied Sciences St. P&ouml;lten, Austria,</li>
                   </ul>
-                  and started out as a Flasher.</p>
+                  and started out as a Flasher.<br/><br/>
               </Grid.Column>
               <Grid.Column
                 className={`${styles.newspaper__column} dashboard__subtitle ${hovered === 2 ? styles.active : ''} ${hovered !== 0 && hovered !== 2 ? styles.inactive : ''}`}
@@ -47,7 +46,7 @@ const Motivation: FC = () => {
                     Via PHP and some DB-hacking <span className="text--pronounced">I temporarily became a Full-Stacker</span> in Groovy/Grails.</p>
                 <p>
                   Falling in ❤ with the representational (UI/UX) capabilities of Javascript I switched to the frontend full time.
-                  <span className="text--pronounced">10 years</span> hence, I came quite a way, via jQuery and Bootstrap, AngularJS to <span className="text--pronounced">nowadays mostly Typescript/React</span>.<p></p>
+                  <span className="text--pronounced">10 years</span> hence, I came quite a way, via jQuery and Bootstrap, AngularJS to <span className="text--pronounced">nowadays mostly Typescript/React</span>.</p><p>
                   I was almost all the time involved with some sidekick pet/hobby-projects, that would at the same time teach me
                   the skills I still lacked.
                   As of 2021 I'm currently into my own `tailwindcss`-like UI/UX project called <a href="https://github.com/prudencss" target="_blank" rel="noreferrer">`prudencss`</a>.
