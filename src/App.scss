@@ -86,3 +86,14 @@ nav ~ div > div {
     background-color: vars.$pink !important;
   }
 }
+
+.drop-shadow--blue {
+  filter: drop-shadow(0 0 7px vars.$blue) !important;
+}
+
+.svg__filter--fire {
+  filter: url(./assets/svg/fire.svg#fire_filter_id);
+}
+.svg__filter--offset {
+  filter: url(./assets/svg/offset.svg#offset_filter_id);
+}

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <style type="text/css">
+        <![CDATA[
+            .svg__filter--fire {
+                filter: url(#fire_filter_id);
+            }
+        ]]>
+      </style>
+      <filter
+          id="fire_filter_id"
+        >
+        <feTurbulence
+            id="feTurbulence3649"
+            baseFrequency="0.056074766355140186 0.058566978193146414"
+            seed="0"
+            result="result10"
+            numOctaves="1"
+            type="fractalNoise"
+        />
+        <feConvolveMatrix
+            id="feConvolveMatrix3713"
+            divisor="1.9255014326647564"
+            kernelMatrix="1 0 0 0 1 0 0 0 1 "
+            edgeMode="duplicate"
+            bias="-1.9770773638968486"
+            result="result15"
+            preserveAlpha="false"
+            order="3 3"
+        />
+        <feGaussianBlur
+            id="feGaussianBlur3731"
+            stdDeviation="22.126168224299064 34.897476635514018"
+            result="result17"
+        />
+        <feDisplacementMap
+            id="feDisplacementMap3739"
+            scale="100"
+            yChannelSelector="R"
+            in2="result10"
+            xChannelSelector="R"
+            in="result17"
+        />
+        <feOffset
+            id="feOffset3741"
+            dx="-14.28571428571429"
+            dy="-100"
+        />
+        <feComposite
+            id="feComposite3751"
+            operator="atop"
+            in2="SourceGraphic"
+        />
+      </filter>
+    </defs>
+</svg>
