@@ -89,6 +89,7 @@ a {
 nav ~ div {
   width: 100vw !important;
   height: 100vh !important;
+  overflow-x: hidden;
 
   &> div:last-child > div {
     background-color: vars.$pink !important;

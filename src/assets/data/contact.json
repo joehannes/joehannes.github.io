@@ -1,0 +1,33 @@
+[{
+  "color": "pink",
+  "icon": "mail",
+  "href": "mailto:johannes.neugschwentner@gmail.com"
+}, {
+  "color": "green",
+  "icon": "phone",
+  "href": "tel:+4368181152357"
+}, {
+  "color": "vk",
+  "icon": "address card",
+  "href": "https://bit.ly/jesusgeek"
+}, {
+  "color": "purple",
+  "icon": "github",
+  "href": "https://github.com/joehannes"
+}, {
+  "color": "facebook",
+  "icon": "facebook",
+  "href": "https://facebook.com/johannes.neugschwentner"
+}, {
+  "color": "blue",
+  "icon": "linkedin",
+  "href": "https://linkedin.com/in/joehannes"
+}, {
+  "color": "orange",
+  "icon": "stack overflow",
+  "href": "https://https://stackoverflow.com/users/1190888/joehannes"
+}, {
+  "color": "red",
+  "icon": "video",
+  "href": "https://bit.ly/iamjoehannes-webdev"
+}]

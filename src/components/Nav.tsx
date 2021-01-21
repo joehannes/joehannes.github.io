@@ -1,30 +1,54 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC, useState } from 'react';
 import {
   Button,
 } from 'semantic-ui-react';
+import { useSpring, animated, interpolate } from 'react-spring';
 
 import styles from './Nav.module.scss';
+import jsonData from '../assets/data/contact.json';
 
-const Nav: FC = () => (
-  <nav className={styles.position}>
-      <Button as="a" circular color="pink" icon="mail" href="mailto:johannes.neugschwentner@gmail.com" />
-      <br/>
-      <Button as="a" circular color="green" icon="phone" href="tel:+4368181152357" />
-      <br/>
-      <Button as="a" circular color="vk" icon="address card" href="https://bit.ly/jesusgeek" target="_blank" rel="noreferrer"/>
-      <br/>
-      <Button as="a" circular color="purple" icon="github" href="https://github.com/joehannes" target="_blank" rel="noreferrer" />
-      <br/>
-      <Button as="a" circular color="facebook" icon="facebook" href="https://facebook.com/johannes.neugschwentner" target="_blank" rel="noreferrer"/>
-      <br/>
-      <Button as="a" circular color="blue" icon="linkedin" href="https://linkedin.com/in/joehannes" target="_blank" rel="noreferrer"/>
-      <br/>
-      <Button as="a" circular color="orange" icon="stack overflow" href="https://stackoverflow.com/users/1190888/joehannes" target="_blank" rel="noreferrer"/>
-      <br/>
-      <Button as="a" circular color="red" icon="video" href="https://bit.ly/iamjoehannes-webdev" target="_blank" rel="noreferrer"/>
-      <br/>
-  </nav>
-);
+const AniButton = animated(Button);
+
+const Nav: FC = () => {
+  let [ proximityScaling, setProximityScaling ] = useState(Array(jsonData.length).fill(1));
+  const { scale, translate} = useSpring({
+    from: {
+      scale: 0,
+      translate: -7,
+    },
+    scale: 1,
+    translate: 0,
+  });
+
+  const handleProximity = (idx: number) => {
+    const s = Array(jsonData.length).fill('');
+    s[idx] = 'button3x';
+    s[idx - 1] = s[idx + 1] = 'button2x';
+    setProximityScaling(s.slice(0, jsonData.length));
+  }
+  return (
+    <nav className={styles.position}>
+      {jsonData.map((d, i) => (
+        <AniButton
+          key={i}
+          as="a"
+          circular
+          color={d.color as any}
+          icon={d.icon}
+          href={d.href}
+          rel="noreferrer"
+          target="_blank"
+          className={`${styles.button} ${styles[proximityScaling[i]]}`}
+          onMouseEnter={() => handleProximity(i)}
+          onMouseLeave={() => setProximityScaling(Array(jsonData.length).fill(1))}
+          style={{
+            transform: interpolate([scale, translate], (s: number, tl: number) => `scale(${s}) translateX(${tl}rem)`),
+          }}
+        />
+      ))}
+    </nav>
+  );
+}
 
 
 export default Nav;

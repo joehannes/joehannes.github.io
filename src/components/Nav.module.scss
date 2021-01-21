@@ -10,3 +10,17 @@
   z-index: 10;
 }
 
+.button {
+  margin: .73rem 0 !important;
+  transition: padding 0.2s ease, margin-left 0.2s ease, transform 0.2s ease !important;
+}
+
+.button2x {
+  transform: scale3d(1.75, 1.75, 1) translateX(.25rem) !important;
+  z-index: 10;
+}
+
+.button3x {
+  transform: scale3d(2.5, 2.5, 1) translateX(.5rem) !important;
+  z-index: 100;
+}
