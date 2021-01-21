@@ -56,7 +56,7 @@ const Welcome: FC = () => {
       </Segment>
       <Segment
         basic
-        className="dashboard__subtitle"
+        className={styles.branding}
         textAlign="center"
       >
         <Branding />
