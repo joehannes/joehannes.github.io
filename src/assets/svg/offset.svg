@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <filter id="offset_filter_id">
+    <feOffset in="SourceGraphic" dx="10" dy="10" />
+  </filter>
+</svg>

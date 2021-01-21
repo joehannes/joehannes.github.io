@@ -5,11 +5,13 @@ import {
   Segment,
 } from 'semantic-ui-react';
 import VideoLooper from 'react-video-looper';
+import { useSpring, animated } from 'react-spring';
 
 import CodersRankActivity from '@codersrank/activity';
 
-import styles from './Welcome.module.scss';
+import Branding from '../components/Branding';
 
+import styles from './Welcome.module.scss';
 import trumpetSound from '../assets/audio/elephant.mp3';
 
 declare global {
@@ -57,7 +59,7 @@ const Welcome: FC = () => {
         className="dashboard__subtitle"
         textAlign="center"
       >
-        <h1 className="font-effect-fire-animation">joehannes</h1>
+        <Branding />
       </Segment>
       <Segment
         basic

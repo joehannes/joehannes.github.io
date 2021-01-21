@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <filter
+      id="blood"
+    >
+    <feTurbulence
+        id="feTurbulence2398"
+        baseFrequency="0.03685636856368564 0"
+        seed="73"
+        result="result10"
+        numOctaves="5"
+        type="fractalNoise"
+    />
+    <feConvolveMatrix
+        id="feConvolveMatrix2400"
+        divisor="1.9669211195928753"
+        kernelMatrix="1 0 0 0 1 0 0 0 1 "
+        edgeMode="duplicate"
+        order="3 3"
+        bias="-1.9770773638968486"
+        result="result15"
+        preserveAlpha="false"
+    />
+    <feGaussianBlur
+        id="feGaussianBlur2402"
+        stdDeviation="45.484904109589046"
+        result="result17"
+    />
+    <feDisplacementMap
+        id="feDisplacementMap2404"
+        scale="100"
+        yChannelSelector="R"
+        in2="result10"
+        xChannelSelector="R"
+        in="result17"
+    />
+    <feOffset
+        id="feOffset2406"
+        dx="-10.48593350383632"
+        dy="100"
+    />
+    <feComposite
+        id="feComposite2408"
+        operator="atop"
+        in2="SourceGraphic"
+    />
+  </filter>
+</svg>
