@@ -32,16 +32,9 @@
   align-items: center;
   justify-content: center;
   color: vars.$black;
-
-  &:nth-child(1) {
-    background: vars.$pink;
-    background: radial-gradient(circle,rgba(vars.$pink, 1) 0%, rgba(vars.$black, .9) 90%);
-  }
+  background: transparent !important;
 
   &:nth-child(2) {
-    background: vars.$blue;
-    background: radial-gradient(circle, rgba(vars.$blue, 1) 0%, rgba(vars.$black, .9) 90%);
-
     .motivation__article {
       transition: transform .5s ease !important;
       transform: scale3d(0.75, 0.75, 1) translateY(-5%);
@@ -55,8 +48,6 @@
   &:nth-child(3) {
     min-height: 100vh;
     height: auto;
-    background: vars.$olive;
-    background: radial-gradient(circle, rgba(vars.$olive, 1) 0%, rgba(vars.$black, .9) 90%);
   }
 
   article > P {
@@ -86,7 +77,7 @@ a {
   filter: drop-shadow(0 0 5px white);
 }
 
-nav ~ div {
+nav ~ div > div {
   width: 100vw !important;
   height: 100vh !important;
   overflow-x: hidden;

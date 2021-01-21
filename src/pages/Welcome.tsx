@@ -1,4 +1,4 @@
-import React, { FC, useRef, useState, useEffect } from 'react';
+import React, { FC } from 'react';
 import {
   Image,
   Reveal,
@@ -57,7 +57,7 @@ const Welcome: FC = () => {
         className="dashboard__subtitle"
         textAlign="center"
       >
-        <h1>joehannes</h1>
+        <h1 className="font-effect-fire-animation">joehannes</h1>
       </Segment>
       <Segment
         basic
