@@ -63,6 +63,13 @@ const Welcome: FC = () => {
       </Segment>
       <Segment
         basic
+        className="dashboard__subtitle"
+        textAlign="center"
+      >
+        <h2>Frontend Developer: React/Typescript</h2>
+      </Segment>
+      <Segment
+        basic
       >
         <codersrank-activity
           username="joehannes"
@@ -72,13 +79,6 @@ const Welcome: FC = () => {
           branding={false}
         >
         </codersrank-activity>
-      </Segment>
-      <Segment
-        basic
-        className="dashboard__subtitle"
-        textAlign="center"
-      >
-        <h2>Frontend Developer: React/Typescript</h2>
       </Segment>
     </Segment.Group>
   </>);
