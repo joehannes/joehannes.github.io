@@ -173,7 +173,7 @@ ul.legend > li {
     border-radius: 40%;
   }
   &:nth-child(5) {
-    border-color: #{color.adjust(vars.$blue, $lightness: -15%, $saturation: 50%)} !important;
+    background-color: #{color.adjust(vars.$blue, $lightness: -15%, $saturation: 50%)} !important;
     border-radius: 50%;
   }
 }
