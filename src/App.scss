@@ -103,10 +103,53 @@ nav ~ div > div {
   height: auto !important;
 }
 
-:root, html {
-  --color-calendar-graph-day-bg: #{vars.$white} !important;
-  --color-calendar-graph-day-L1-bg: #{color.adjust(vars.$blue, $lightness: 30%)} !important;
-  --color-calendar-graph-day-L2-bg: #{color.adjust(vars.$blue, $lightness: 15%, $saturation: 15% )}!important;
-  --color-calendar-graph-day-L3-bg: #{color.adjust(vars.$blue, $saturation: 30%)} !important;
-  --color-calendar-graph-day-L4-bg: #{color.adjust(vars.$blue, $lightness: -15%, $saturation: 50%)} !important;
+svg {
+  rect[data-count] {
+    fill: #{color.adjust(vars.$blue, $lightness: -15%, $saturation: 50%)} !important;
+  }
+
+  rect[data-count="0"] {
+    fill: #{vars.$white} !important;
+  }
+
+  rect[data-count="1"],
+  rect[data-count="2"],
+  rect[data-count="3"],
+  rect[data-count="4"],
+  rect[data-count="5"] {
+    fill: #{color.adjust(vars.$blue, $lightness: 30%)} !important;
+  }
+
+  rect[data-count="6"],
+  rect[data-count="7"],
+  rect[data-count="8"],
+  rect[data-count="9"],
+  rect[data-count="10"] {
+    fill: #{color.adjust(vars.$blue, $lightness: 15%, $saturation: 15% )} !important;
+  }
+
+  rect[data-count="11"],
+  rect[data-count="12"],
+  rect[data-count="13"],
+  rect[data-count="14"],
+  rect[data-count="15"] {
+    fill: #{color.adjust(vars.$blue, $saturation: 30%)} !important;
+  }
+}
+
+ul.legend > li {
+  background-color: #{vars.$white} !important;
+
+  &:nth-child(2) {
+    background-color: #{color.adjust(vars.$blue, $lightness: 30%)} !important;
+  }
+  &:nth-child(3) {
+    background-color: #{color.adjust(vars.$blue, $lightness: 15%, $saturation: 15% )} !important;
+  }
+  &:nth-child(4) {
+    background-color: #{color.adjust(vars.$blue, $saturation: 30%)} !important;
+  }
+  &:nth-child(5) {
+    background-color: #{color.adjust(vars.$blue, $lightness: -15%, $saturation: 50%)} !important;
+  }
 }
