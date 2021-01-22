@@ -5,6 +5,20 @@ object-assign
 */
 
 /*!
+     * days <https://github.com/jonschlinkert/days>
+     *
+     * Copyright (c) 2014-2017, Jon Schlinkert.
+     * Released under the MIT License.
+     */
+
+/*!
+     * months <https://github.com/datetime/months>
+     *
+     * Copyright (c) 2014-2017, Jon Schlinkert.
+     * Released under the MIT License.
+     */
+
+/*!
   Copyright (c) 2015 Jed Watson.
   Based on code that is Copyright 2013-2015, Facebook, Inc.
   All rights reserved.
