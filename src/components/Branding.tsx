@@ -23,9 +23,9 @@ const Branding: FC<IBrandingProps> = ({ style }) => {
   return (<>
     <animated.svg
       height="110px"
-      fill="black"
+      fill="white"
       fillOpacity={fillAni.o}
-      stroke="black"
+      stroke="white"
       strokeDasharray="1620"
       strokeLinecap="round"
       strokeLinejoin="round"

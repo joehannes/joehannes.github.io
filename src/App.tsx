@@ -33,9 +33,9 @@ function App() {
 
   const black = "#1B1C1D";
   const olive = "#32CD32";
-  const pink = "#FF1493";
+  const cyan = "#5EC4D8";
   const blue = "#0E6EB8";
-  const backgrounds = [pink, blue, olive];
+  const backgrounds = [cyan, blue, olive];
 
   let [ background, setBackground ] = useState(constructBackground(backgrounds[0]));
 

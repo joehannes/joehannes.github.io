@@ -4,25 +4,13 @@ import {
   Reveal,
   Segment,
 } from 'semantic-ui-react';
+import GithubCal from 'react-ts-github-calendar';
 import VideoLooper from 'react-video-looper';
-import { useSpring, animated } from 'react-spring';
-
-import CodersRankActivity from '@codersrank/activity';
 
 import Branding from '../components/Branding';
 
 import styles from './Welcome.module.scss';
 import trumpetSound from '../assets/audio/elephant.mp3';
-
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'codersrank-activity': any;
-    }
-  }
-}
-
-window.customElements.define('codersrank-activity', CodersRankActivity as unknown as CustomElementConstructor);
 
 const Welcome: FC = () => {
   let trumpHello = new Audio(trumpetSound);
@@ -63,7 +51,7 @@ const Welcome: FC = () => {
       </Segment>
       <Segment
         basic
-        className="dashboard__subtitle"
+        className={`dashboard__subtitle ${styles.subtitle}`}
         textAlign="center"
       >
         <h2>Frontend Developer: React/Typescript</h2>
@@ -71,14 +59,12 @@ const Welcome: FC = () => {
       <Segment
         basic
       >
-        <codersrank-activity
-          username="joehannes"
-          labels
-          legend
-          tooltip
-          branding={false}
-        >
-        </codersrank-activity>
+        <GithubCal
+          userName="joehannes"
+          responsive={true}
+          tooltips={false}
+          global_stats={false}
+        />
       </Segment>
     </Segment.Group>
   </>);

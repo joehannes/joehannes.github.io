@@ -1,9 +1,11 @@
-$fireColor: rgb(255,20,50,.7);
-$fireColorT: rgba(255,20,50,0);
-$fireColor_mid: rgb(255,80,0);
-$fireColorT_mid: rgba(255,80,0,0);
-$fireColor_top: rgba(0,50,255,.3);
-$fireColorT_top: rgba(0,50,255,0);
+@use '../theme.config.scss' as vars;
+
+$fireColor: vars.$blue;
+$fireColorT: rgba(vars.$blue, 0);
+$fireColor_mid: vars.$cyan;
+$fireColorT_mid: rgba(vars.$cyan, 0);
+$fireColor_top: vars.$purple;
+$fireColorT_top: rgba(vars.$purple, 0);
 $dur: 1s;
 $blur: 0.02em;
 $fireRad: 1em;

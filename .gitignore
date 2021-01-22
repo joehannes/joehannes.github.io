@@ -25,3 +25,6 @@ yarn-error.log*
 
 #C-Tags
 tags
+
+#eslint-cache
+.eslintcache

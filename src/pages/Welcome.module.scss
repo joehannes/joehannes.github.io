@@ -9,11 +9,10 @@
     width: 128px !important;
     height: 128px !important;
   }
-
-  div {
-    border: 3px solid vars.$blue;
+  &> div {
     border-radius: 50%;
-    box-shadow: 0 0 15px 5px vars.$blue;
+    border: 2px solid vars.$cyan;
+    box-shadow: 0 0 25px 15px vars.$blue, 0 25px 35px 35px vars.$cyan;
   }
 }
 
@@ -24,7 +23,12 @@
 }
 
 .branding {
-  transform: translateY(37%);
+  max-height: 110px;
+}
+
+.subtitle {
+  color: vars.$white;
+  filter: drop-shadow(0 0 5px vars.$black);
 }
 
 .hidden {

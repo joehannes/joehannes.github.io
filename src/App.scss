@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "./theme.config" as vars;
 
 .page__container--color {
@@ -96,4 +97,16 @@ nav ~ div > div {
 }
 .svg__filter--offset {
   filter: url(./assets/svg/offset.svg#offset_filter_id);
+}
+
+#github-container .js-calendar-graph.calendar-graph {
+  height: auto !important;
+}
+
+:root {
+  --color-calendar-graph-day-bg: #{vars.$white};
+  --color-calendar-graph-day-L1-bg: #{color.adjust(vars.$blue, $lightness: 30%)};
+  --color-calendar-graph-day-L2-bg: #{color.adjust(vars.$blue, $lightness: 15%, $saturation: 15% )};
+  --color-calendar-graph-day-L3-bg: #{color.adjust(vars.$blue, $saturation: 30%)};
+  --color-calendar-graph-day-L4-bg: #{color.adjust(vars.$blue, $lightness: -15%, $saturation: 50%)};
 }
