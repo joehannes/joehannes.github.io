@@ -1,0 +1,97 @@
+[{
+  "name": "Flash",
+  "url": null,
+  "proficiency": 7,
+  "first": 2005,
+  "end": 2009,
+  "description": "Design in the Authoring Tool and Programming in OOP Actionscript",
+  "experience": ["Internship Walt Disney Germany @Digital Garden Munich", "CWC Vienna"],
+  "projects": [{
+    "name": "Miracle",
+    "url": null
+  },{
+    "name": "Aviator",
+    "url": null
+  }]
+}, {
+  "name": "PHP",
+  "url": "https://php.net",
+  "proficiency": 4,
+  "first": 2009,
+  "end": 2010,
+  "description": "Hacky PHP 4"
+}, {
+  "name": "SQL",
+  "url": [
+    "https://www.oracle.com/database/technologies/appdev/sql.html",
+    "https://www.postgresql.org",
+    "https://www.mysql.com"
+  ],
+  "proficiency": 4,
+  "first": 2009,
+  "end": 2010,
+  "description": "Oracle, PostgreSQL, MySQL administration and debugging",
+  "experience": ["Solution-X"]
+}, {
+  "name": "Groovy/Grails",
+  "url": ["https://groovy-lang.org", "https://grails.org/"],
+  "proficiency": 3,
+  "first": 2010,
+  "end": 2011,
+  "description": "Junior Fullstacker Groovy/Grails and Javascript/jQuery",
+  "experience": ["HistoricFutures"],
+  "projects": [{
+    "name": "String",
+    "url": "https://getstring3.com"
+  }]
+}, {
+  "name": "Javascript",
+  "url": "https://www.ecma-international.org/",
+  "proficiency": 9,
+  "first": 2010,
+  "end": null,
+  "description": "jQuery, AJAX, widgets, JavascriptMVC, AngularJS, React, ES@next",
+  "experience": ["HistoricFutures", "Fabasoft", "Backbase", "Ciuvo"],
+  "projects": [{
+    "name": "MSC Certification",
+    "url": "https://msc.org"
+  }, {
+    "name": "Fabasoft Folio",
+    "url": "https://www.fabasoft.com/de/produkte/fabasoft-folio"
+  }, {
+    "name": "Backbase Portal",
+    "url": "https://www.backbase.com/platform/"
+  }, {
+    "name": "Ciuvo Price Comparison",
+    "url": "https://ciuvo.com"
+  }]
+}, {
+  "name": "Coffeescript",
+  "url": "https://coffeescript.org/",
+  "proficiency": 8,
+  "first": 2012,
+  "end": 2014,
+  "description": "Hacky approach to productivity and OOP/class syntax",
+  "experience": ["Nexxar", "Ciuvo", "RockstarDev"],
+  "projects": [{
+    "name": "angular-clazz",
+    "url": null
+  }, {
+    "name": "Nexxar Chart Generator",
+    "url": "https://www.push-reporting.com/"
+  }, {
+    "name": "Ciuvo Price Comparison",
+    "url": "https://ciuvo.com"
+  }, {
+    "name": "AIESEC Exchange Planner",
+    "url": "https://www.aiesec.de/"
+  }]
+}, {
+  "name": "CanJS",
+  "proficiency": 5,
+  "first": 2011,
+  "end": 2012,
+  "description": "First contact with frontend frameworks",
+  "experience": ["Nexxar"],
+  "projects": []
+}]
