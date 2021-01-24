@@ -36,7 +36,7 @@ const Branding: FC<IBrandingProps> = ({ style }) => {
       <path  d={jsonData.path} />
     </animated.svg>
     <animated.div className={styles.fire} style={{ opacity: fireAni.o }}>
-      {Array(50).fill(0).map((x, i) => (<div key={x} className={styles.particle} />))}
+      {Array(50).fill(0).map((x, i) => (<div key={i} className={styles.particle} />))}
     </animated.div>
   </>);
 }
