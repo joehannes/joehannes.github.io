@@ -4,10 +4,16 @@ export const Technology = {
   description: 'all tech of my experience',
   type: 'object',
   properties: {
-    id: 'number',
+    id: {
+      type: 'number',
+      primary: true,
+    },
     title: 'string',
     from: 'number',
-    to: 'number',
-    experience: 'number',
+    level: {
+      type: 'number',
+      minimum: 1,
+      maximum: 7,
+    },
   },
 };

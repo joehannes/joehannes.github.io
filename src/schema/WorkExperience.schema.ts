@@ -3,7 +3,18 @@ export const WorkExperience = {
   version: 0,
   description: 'all relevant job/project specifics',
   type: 'object',
+  schema: {
+    technology: 'Technology',
+    position: 'Position',
+    remote: 'Location',
+    contract: 'ContractType',
+    company: 'Company',
+  },
   properties: {
+    id: {
+      type: 'number',
+      primary: true,
+    },
     style: {
       type: 'object',
       properties: {
@@ -19,40 +30,13 @@ export const WorkExperience = {
       },
     },
     technology: {
-      type: 'object',
-      properties: {
-        schema: 'string',
-        id: 'number',
-      },
+      type: 'array',
+      items: 'number',
     },
-    position: {
-      type: 'object',
-      properties: {
-        schema: 'string',
-        id: 'number',
-      },
-    },
-    remote: {
-      type: 'object',
-      properties: {
-        schema: 'string',
-        id: 'number',
-      },
-    },
-    contract: {
-      type: 'object',
-      properties: {
-        schema: 'string',
-        id: 'number',
-      },
-    },
-    company: {
-      type: 'object',
-      properties: {
-        schema: 'string',
-        id: 'number',
-      },
-    },
+    position: 'number',
+    remote: 'number',
+    contract: 'number',
+    company: 'number',
     description: {
       type: 'object',
       properties: {

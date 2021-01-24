@@ -1,10 +1,13 @@
-export const RemoteLocation = {
+export const Location = {
   title: 'remote_location',
   version: 0,
   description: 'remote city of digital nomadism',
   type: 'object',
   properties: {
-    id: 'number',
+    id: {
+     type: 'number',
+     primary: true,
+    },
     city: 'string',
     country: 'string',
     region: 'string',

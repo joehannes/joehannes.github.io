@@ -4,7 +4,10 @@ export const Position = {
   description: 'from hackster to CTO',
   type: 'object',
   properties: {
-    id: 'number',
+    id: {
+      type: 'number',
+      primary: true,
+    },
     title: 'string',
     manager: 'boolean',
     coder: 'boolean',

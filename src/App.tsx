@@ -1,4 +1,5 @@
-import React, { useState, FC, PropsWithChildren } from 'react';
+import React, { useState } from 'react';
+import { Provider } from 'react-redux';
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,6 +11,7 @@ import Background from './components/Background';
 import Nav from './components/Nav';
 import Dashboard from './routes/Dashboard';
 
+import store from './store';
 import './App.scss';
 
 function App() {
@@ -57,22 +59,24 @@ function App() {
   }
 
   return (
-    <Router>
-      <Nav />
-      <Switch>
-        <Route path="/">
-          <Background
-            style={{ background }}
-          >
-            <Scrollbars
-              onScroll={handleScroll}
+    <Provider store={store}>
+      <Router>
+        <Nav />
+        <Switch>
+          <Route path="/">
+            <Background
+              style={{ background }}
             >
-              <Dashboard/>
-            </Scrollbars>
-          </Background>
-        </Route>
-      </Switch>
-    </Router>
+              <Scrollbars
+                onScroll={handleScroll}
+              >
+                <Dashboard/>
+              </Scrollbars>
+            </Background>
+          </Route>
+        </Switch>
+      </Router>
+    </Provider>
   );
 }
 

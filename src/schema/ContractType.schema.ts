@@ -4,7 +4,10 @@ export const ContractType = {
   description: 'permanent, contract, internship, owner',
   type: 'object',
   properties: {
-    id: 'number',
+    id: {
+      type: 'number',
+      primary: true,
+    },
     contract: 'string',
   }
 }
