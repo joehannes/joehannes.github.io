@@ -1,11 +1,9 @@
 import { combineReducers } from 'redux';
 
-import { propertyInquiry, analytics } from '../features';
-
+import { workExperience } from '../features';
 
 const rootReducer = combineReducers({
-  propertyInquiry: propertyInquiry.propertyInquiryReducer,
-  analytics: analytics.analyticsReducer,
+  workExperience: workExperience.workExperienceReducer,
 });
 
 export default rootReducer;

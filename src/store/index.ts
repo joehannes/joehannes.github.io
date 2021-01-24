@@ -1,26 +1,25 @@
-import { RootAction, RootState, Services } from 'StoreTypes';
+// import { RootAction, RootState, Services } from 'StoreTypes';
 import { createStore, applyMiddleware } from 'redux';
-import { createEpicMiddleware } from 'redux-observable';
+import thunk from 'redux-thunk';
 
 import { composeEnhancers } from './utils';
 import rootReducer from './root-reducer';
-import initialState from './root-model';
-import rootEpic from './root-epic';
-import services from '../services';
+// import initialState from './root-model';
+// import rootEpic from './root-epic';
+// import services from '../services';
 
-export const epicMiddleware = createEpicMiddleware<
-  RootAction,
-  RootAction,
-  RootState,
-  Services
->({
-  dependencies: services,
-});
+// export const epicMiddleware = createEpicMiddleware<
+//   RootAction,
+//   RootAction,
+//   RootState,
+//   Services
+// >({
+//   dependencies: services,
+// });
 
-const middleware = [epicMiddleware];
-const enhancer = composeEnhancers(applyMiddleware(...middleware));
-const store = createStore(rootReducer, initialState, enhancer);
+const enhancer = composeEnhancers(applyMiddleware(thunk));
+const store = createStore(rootReducer, {} , enhancer);
 
-epicMiddleware.run(rootEpic);
+// epicMiddleware.run(rootEpic);
 
 export default store;
