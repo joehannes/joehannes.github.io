@@ -1,4 +1,6 @@
-export type ContractType = {
+type TContractType = {
   id: number,
   contract: string,
 }
+
+export default TContractType;

@@ -1,9 +1,10 @@
-export type Company = {
+import TLocation from './Location.model';
+
+export type TCompanyBase = {
   id: number,
   title: string,
   industry: string,
   size: number,
-  location: string,
   icon: {
     id: string,
     color: string,
@@ -11,3 +12,15 @@ export type Company = {
   url: string,
   projects: { title: string, url: string}[],
 }
+
+export type TCompanyDetails = {
+  location: number,
+}
+
+interface ICompanyDetails extends TCompanyBase {
+  location: TLocation;
+}
+
+type TCompany = ICompanyDetails;
+
+export default TCompany;
