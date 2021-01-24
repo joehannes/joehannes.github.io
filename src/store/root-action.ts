@@ -1,6 +1,5 @@
-import { propertyInquiry, analytics } from '../features';
+import { workExperience } from '../features';
 
 export default {
-  propertyInquiry: propertyInquiry.propertyInquiryActions,
-  analytics: analytics.analyticsActions,
+  workExperience: workExperience.workExperienceActions,
 }

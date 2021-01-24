@@ -26,12 +26,6 @@ const Dashboard: FC = () => {
       fluid
       className="page__container"
     >
-      <TechStack />
-    </Container>
-    <Container
-      fluid
-      className="page__container"
-    >
       <WorkExperience />
     </Container>
   </>);
