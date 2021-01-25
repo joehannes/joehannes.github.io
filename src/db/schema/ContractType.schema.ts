@@ -1,4 +1,4 @@
-export const ContractType = {
+const ContractType = {
   title: 'contract_type',
   version: 0,
   description: 'permanent, contract, internship, owner',
@@ -10,4 +10,6 @@ export const ContractType = {
     },
     contract: 'string',
   }
-}
+};
+
+export default ContractType;

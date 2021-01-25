@@ -1,4 +1,4 @@
-export const Technology = {
+const Technology = {
   title: 'technology',
   version: 0,
   description: 'all tech of my experience',
@@ -17,3 +17,5 @@ export const Technology = {
     },
   },
 };
+
+export default Technology;

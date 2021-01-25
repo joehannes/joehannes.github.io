@@ -1,4 +1,4 @@
-export const Position = {
+const Position = {
   title: 'carreer_level_title',
   version: 0,
   description: 'from hackster to CTO',
@@ -13,3 +13,5 @@ export const Position = {
     coder: 'boolean',
   },
 };
+
+export default Position;

@@ -1,11 +1,8 @@
-export const Company = {
+const Company = {
   title: 'company',
   version: 0,
   description: 'employer or own company',
   type: 'object',
-  schema: {
-    location: 'Location',
-  },
   properties: {
     id: {
       type: 'number',
@@ -18,7 +15,10 @@ export const Company = {
       minimum: 1,
       maximum: 7,
     },
-    location: 'number',
+    location: {
+      ref: 'location',
+      type: 'number',
+    },
     icon: {
       type: 'object',
       properties: {
@@ -39,3 +39,5 @@ export const Company = {
     },
   },
 }
+
+export default Company;

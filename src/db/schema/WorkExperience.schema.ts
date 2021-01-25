@@ -1,4 +1,4 @@
-export const WorkExperience = {
+const WorkExperience = {
   title: 'work_experience',
   version: 0,
   description: 'all relevant job/project specifics',
@@ -30,13 +30,28 @@ export const WorkExperience = {
       },
     },
     technology: {
+      ref: 'technology',
       type: 'array',
-      items: 'number',
+      items: {
+        type: 'number',
+      },
     },
-    position: 'number',
-    remote: 'number',
-    contract: 'number',
-    company: 'number',
+    position: {
+      ref: 'position',
+      type: 'number',
+    },
+    remote: {
+      ref: 'location',
+      type: 'number',
+    },
+    contract: {
+      ref: 'contract_type',
+      type: 'number',
+    },
+    company: {
+      ref: 'company',
+      type: 'number',
+    },
     description: {
       type: 'object',
       properties: {
@@ -48,3 +63,5 @@ export const WorkExperience = {
     },
   },
 };
+
+export default WorkExperience;

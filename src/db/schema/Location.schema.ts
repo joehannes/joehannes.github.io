@@ -1,4 +1,4 @@
-export const Location = {
+const Location = {
   title: 'remote_location',
   version: 0,
   description: 'remote city of digital nomadism',
@@ -14,3 +14,5 @@ export const Location = {
     timezone: 'string',
   }
 }
+
+export default Location;
