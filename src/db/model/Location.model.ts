@@ -1,5 +1,5 @@
 type TLocation = {
-  id: number,
+  id: string,
   city: string,
   country: string,
   region: string,

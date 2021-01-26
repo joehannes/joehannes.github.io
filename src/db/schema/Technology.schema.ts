@@ -1,21 +1,29 @@
-const Technology = {
+import { normalize, RxJsonSchema } from 'rxdb';
+
+import { TPortfolioDoc } from '../model';
+
+const Technology: RxJsonSchema<TPortfolioDoc["Technology"]> = normalize({
   title: 'technology',
   version: 0,
   description: 'all tech of my experience',
   type: 'object',
   properties: {
     id: {
-      type: 'number',
+      type: 'string',
       primary: true,
     },
-    title: 'string',
-    from: 'number',
+    title: {
+      type: 'string',
+    },
+    from: {
+      type: 'number',
+    },
     level: {
       type: 'number',
       minimum: 1,
       maximum: 7,
     },
   },
-};
+});
 
 export default Technology;

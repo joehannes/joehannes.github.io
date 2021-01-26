@@ -1,5 +1,5 @@
 type TTechnology = {
-  id: number,
+  id: string,
   title: string,
   from: number,
   to: number,

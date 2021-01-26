@@ -1,5 +1,5 @@
 type TPosition = {
-  id: number,
+  id: string,
   title: string,
   manager: boolean,
   coder: boolean,

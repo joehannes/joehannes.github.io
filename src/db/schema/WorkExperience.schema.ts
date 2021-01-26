@@ -1,32 +1,37 @@
-const WorkExperience = {
+import { normalize, RxJsonSchema } from 'rxdb';
+
+import { TPortfolioDoc } from '../model';
+
+const WorkExperience: RxJsonSchema<TPortfolioDoc["WorkExperience"]> = normalize({
   title: 'work_experience',
   version: 0,
   description: 'all relevant job/project specifics',
   type: 'object',
-  schema: {
-    technology: 'Technology',
-    position: 'Position',
-    remote: 'Location',
-    contract: 'ContractType',
-    company: 'Company',
-  },
   properties: {
     id: {
-      type: 'number',
+      type: 'string',
       primary: true,
     },
     style: {
       type: 'object',
       properties: {
-        background: 'string',
-        color: 'string',
+        background: {
+          type: 'string',
+        },
+        color: {
+          type: 'string',
+        },
       },
     },
     date: {
       type: 'object',
       properties: {
-        from: 'number',
-        to: 'number',
+        from: {
+          type: 'number',
+        },
+        to: {
+          type: 'number',
+        },
       },
     },
     technology: {
@@ -55,13 +60,21 @@ const WorkExperience = {
     description: {
       type: 'object',
       properties: {
-        function: 'string',
-        teamsize: 'string',
-        method: 'string',
-        focus: 'string',
+        function: {
+          type: 'string',
+        },
+        teamsize: {
+          type: 'string',
+        },
+        method: {
+          type: 'string',
+        },
+        focus: {
+          type: 'string',
+        },
       },
     },
   },
-};
+});
 
 export default WorkExperience;

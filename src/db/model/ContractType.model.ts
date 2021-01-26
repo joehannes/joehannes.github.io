@@ -1,5 +1,5 @@
 type TContractType = {
-  id: number,
+  id: string,
   contract: string,
 }
 
