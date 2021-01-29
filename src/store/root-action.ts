@@ -1,5 +1,7 @@
-import { workExperience } from '../features';
+import { work } from '../features';
 
-export default {
-  workExperience: workExperience.workExperienceActions,
-}
+const rootAction = {
+  work: work.workActions,
+};
+
+export default rootAction;

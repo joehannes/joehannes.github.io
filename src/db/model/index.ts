@@ -6,6 +6,17 @@ import TLocation from './Location.model';
 import TPosition from './Position.model';
 import TTechnology from './Technology.model';
 import TContractType from './ContractType.model';
+import TProject from './Project.model';
+
+export type {
+  TWorkExperience,
+  TCompany,
+  TLocation,
+  TPosition,
+  TTechnology,
+  TContractType,
+  TProject,
+};
 
 export interface IPortfolioDoc {
   WorkExperience: RxDocument<TWorkExperience, {}>,
@@ -14,33 +25,39 @@ export interface IPortfolioDoc {
   Position: RxDocument<TPosition>,
   Technology: RxDocument<TTechnology>,
   ContractType: RxDocument<TContractType>,
+  Project: RxDocument<TProject>,
 };
 
 export type TPortfolioDoc = {
-  WorkExperience: RxDocument<TWorkExperience, {}>,
-  Company: RxDocument<TCompany>,
-  Location: RxDocument<TLocation>,
-  Position: RxDocument<TPosition>,
-  Technology: RxDocument<TTechnology>,
-  ContractType: RxDocument<TContractType>,
+  work_experience: RxDocument<TWorkExperience, {}>,
+  company: RxDocument<TCompany>,
+  location: RxDocument<TLocation>,
+  position: RxDocument<TPosition>,
+  technology: RxDocument<TTechnology>,
+  contract_type: RxDocument<TContractType>,
+  project: RxDocument<TProject>,
 };
 
 export type TPortfolioCollection = {
-  WorkExperience: RxCollection<RxDocument<TWorkExperience, {}>, {}, {}>,
-  Company: RxCollection<RxDocument<TCompany, {}>, {}, {}>,
-  Location: RxCollection<RxDocument<TLocation, {}>, {}, {}>,
-  Position: RxCollection<RxDocument<TPosition, {}>, {}, {}>,
-  Technology: RxCollection<RxDocument<TTechnology, {}>, {}, {}>,
-  ContractType: RxCollection<RxDocument<TContractType, {}>, {}, {}>,
+  work_experience: RxCollection<RxDocument<TWorkExperience, {}>, {}, {}>,
+  company: RxCollection<RxDocument<TCompany, {}>, {}, {}>,
+  location: RxCollection<RxDocument<TLocation, {}>, {}, {}>,
+  position: RxCollection<RxDocument<TPosition, {}>, {}, {}>,
+  technology: RxCollection<RxDocument<TTechnology, {}>, {}, {}>,
+  contract_type: RxCollection<RxDocument<TContractType, {}>, {}, {}>,
+  project: RxCollection<RxDocument<TProject, {}>, {}, {}>,
 }
 
+export type TPortfolioCollectionKey = keyof TPortfolioCollection;
+
 export interface IPortfolioCollection {
-  WorkExperience: RxCollection<RxDocument<TWorkExperience, {}>, {}, {}>,
-  Company: RxCollection<RxDocument<TCompany, {}>, {}, {}>,
-  Location: RxCollection<RxDocument<TLocation, {}>, {}, {}>,
-  Position: RxCollection<RxDocument<TPosition, {}>, {}, {}>,
-  Technology: RxCollection<RxDocument<TTechnology, {}>, {}, {}>,
-  ContractType: RxCollection<RxDocument<TContractType, {}>, {}, {}>,
+  work_experience: RxCollection<RxDocument<TWorkExperience, {}>, {}, {}>,
+  company: RxCollection<RxDocument<TCompany, {}>, {}, {}>,
+  location: RxCollection<RxDocument<TLocation, {}>, {}, {}>,
+  position: RxCollection<RxDocument<TPosition, {}>, {}, {}>,
+  technology: RxCollection<RxDocument<TTechnology, {}>, {}, {}>,
+  contract_type: RxCollection<RxDocument<TContractType, {}>, {}, {}>,
+  project: RxCollection<RxDocument<TProject, {}>, {}, {}>,
 }
 
 export type TPortfolioDatabase = RxDatabase<TPortfolioCollection>;

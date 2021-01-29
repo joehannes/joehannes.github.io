@@ -7,9 +7,9 @@ export type TCompany = {
     id: string,
     color: string,
   },
-  location: number,
+  location: string,
   url: string,
-  projects: { title: string, url: string}[],
+  projects: string[],
 }
 
 export default TCompany;

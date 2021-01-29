@@ -1,16 +1,18 @@
-export type ContractType = [{
-  id: 1,
+const ContractType = [{
+  id: "1",
   contract: 'contract',
 },
 {
-  id: 2,
+  id: "2",
   contract: 'permanent',
 },
 {
-  id: 3,
+  id: "3",
   contract: 'internship',
 },
 {
-  id: 4,
+  id: "4",
   contract: 'owner',
 }];
+
+export default ContractType;

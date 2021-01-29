@@ -1,1 +1,1 @@
-export * as workExperience from './work_experience';
+export * as work from './work';

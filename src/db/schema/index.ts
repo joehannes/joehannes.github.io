@@ -1,4 +1,4 @@
-import { RxJsonSchema, RxCollectionCreator } from 'rxdb';
+import { RxJsonSchema } from 'rxdb';
 
 import { TPortfolioDoc } from '../model';
 
@@ -8,15 +8,16 @@ import Location from './Location.schema';
 import Position from './Position.schema';
 import Technology from './Technology.schema';
 import ContractType from './ContractType.schema';
-
+import Project from './Project.schema';
 
 export type TSchema = {
-  WorkExperience: RxJsonSchema<TPortfolioDoc["WorkExperience"]>,
-  Company: RxJsonSchema<TPortfolioDoc["Company"]>,
-  Location: RxJsonSchema<TPortfolioDoc["Location"]>,
-  Position: RxJsonSchema<TPortfolioDoc["Position"]>,
-  Technology: RxJsonSchema<TPortfolioDoc["Technology"]>,
-  ContractType: RxJsonSchema<TPortfolioDoc["ContractType"]>,
+  WorkExperience: RxJsonSchema<TPortfolioDoc["work_experience"]>,
+  Company: RxJsonSchema<TPortfolioDoc["company"]>,
+  Location: RxJsonSchema<TPortfolioDoc["location"]>,
+  Position: RxJsonSchema<TPortfolioDoc["position"]>,
+  Technology: RxJsonSchema<TPortfolioDoc["technology"]>,
+  ContractType: RxJsonSchema<TPortfolioDoc["contract_type"]>,
+  Project: RxJsonSchema<TPortfolioDoc["project"]>,
 };
 
 const PortfolioSchema: { [specificSchema: string]: {
@@ -24,12 +25,13 @@ const PortfolioSchema: { [specificSchema: string]: {
   methods?: { [fn: string]: (...args: any[]) => any },
   statics?: { [fn: string]: (...args: any[]) => Promise<any> },
 }} = {
-  workExperience: { schema: WorkExperience },
+  work_experience: { schema: WorkExperience },
   company: { schema: Company },
   location: { schema: Location },
   position: { schema: Position },
   technology: { schema: Technology },
-  contractType: { schema: ContractType },
+  contract_type: { schema: ContractType },
+  project: { schema: Project },
 };
 
 export default PortfolioSchema;

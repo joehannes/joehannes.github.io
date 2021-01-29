@@ -2,7 +2,7 @@ import { normalize, RxJsonSchema } from 'rxdb';
 
 import { TPortfolioDoc } from '../model';
 
-const Location: RxJsonSchema<TPortfolioDoc["Location"]> = normalize({
+const Location: RxJsonSchema<TPortfolioDoc["location"]> = normalize({
   title: 'remote_location',
   version: 0,
   description: 'remote city of digital nomadism',

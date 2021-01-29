@@ -2,7 +2,7 @@ import { normalize, RxJsonSchema } from 'rxdb';
 
 import { TPortfolioDoc } from '../model';
 
-const Position: RxJsonSchema<TPortfolioDoc["Position"]> = normalize({
+const Position: RxJsonSchema<TPortfolioDoc["position"]> = normalize({
   title: 'carreer_level_title',
   version: 0,
   description: 'from hackster to CTO',

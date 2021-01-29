@@ -1,82 +1,96 @@
-import React, { useState } from 'react';
-import { Provider } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from 'react-router-dom';
-import { Scrollbars } from 'react-custom-scrollbars';
+import { RxChangeEvent } from 'rxdb';
 
 import Background from './components/Background';
 import Nav from './components/Nav';
 import Dashboard from './routes/Dashboard';
 
-import store from './store';
+import DBSchema from './db/schema';
+import * as DBModel from './db/model';
+import * as WorkActions from './features/work/actions';
+import { createDB, createSchema, populateDB } from './db';
+
+import workExperienceData from './assets/data/db/WorkExperience.model';
+import companyData from './assets/data/db/Company.model';
+import locationData from './assets/data/db/Location.model';
+import positionData from './assets/data/db/Position.model';
+import technologyData from './assets/data/db/Technology.model';
+import contractTypeData from './assets/data/db/ContractType.model';
+import projectData from './assets/data/db/Project.model';
 import './App.scss';
 
 function App() {
-  const getColorMix = (color1: string, color2: string, ratio: number = 0.5) => {
-    var hex = function(x: any) {
-        x = x.toString(16);
-        return (x.length === 1) ? '0' + x : x;
-    };
+  const dispatch = useDispatch();
 
-    color1 = color1.slice(1);
-    color2 = color2.slice(1);
+  useEffect(() => {
+    const dbP: Promise<DBModel.TPortfolioDatabase> = createDB();
+    let dbRef: DBModel.TPortfolioDatabase;
 
-    var r = Math.ceil(parseInt(color1.substring(0,2), 16) * ratio + parseInt(color2.substring(0,2), 16) * (1-ratio));
-    var g = Math.ceil(parseInt(color1.substring(2,4), 16) * ratio + parseInt(color2.substring(2,4), 16) * (1-ratio));
-    var b = Math.ceil(parseInt(color1.substring(4,6), 16) * ratio + parseInt(color2.substring(4,6), 16) * (1-ratio));
+    dbP.then(
+      (db: DBModel.TPortfolioDatabase) => {
+        dbRef = db;
+        const schemaP: Promise<DBModel.TPortfolioCollection> = createSchema(db);
 
-    return `#${hex(r)}${hex(g)}${hex(b)}`;
-  }
+        schemaP.then((dbSchema: DBModel.TPortfolioCollection) => {
+          (Object.keys(DBSchema) as DBModel.TPortfolioCollectionKey[]).forEach(schema => {
+            const actions = {
+              "work_experience": WorkActions.updateWorkExperience,
+              "company": WorkActions.updateCompany,
+              "location": WorkActions.updateLocation,
+              "position": WorkActions.updatePosition,
+              "technology": WorkActions.updateTechnology,
+              "contract_type": WorkActions.updateContractType,
+              "project": WorkActions.updateProject,
+            }
 
-  const constructBackground = (color: string) => `radial-gradient(circle, ${color} 0%, ${black} 90%)`;
+            dbSchema[schema].$.subscribe((changeEvent: RxChangeEvent) => {
+              const payload = changeEvent.rxDocument.toJSON();
 
-  const black = "#1B1C1D";
-  const olive = "#32CD32";
-  const cyan = "#5EC4D8";
-  const blue = "#0E6EB8";
-  const backgrounds = [cyan, blue, olive];
+              dispatch(actions[changeEvent.collectionName as DBModel.TPortfolioCollectionKey](payload));
+            });
+            populateDB(dbSchema, {
+              workExperienceData,
+              companyData,
+              locationData,
+              positionData,
+              technologyData,
+              contractTypeData,
+              projectData,
+            });
+          });
+        }, (err: any) => {
+          console.dir(err);
+        });
+      },
+      ({ code }) => {
+        console.dir(code);
+      }
+    );
 
-  let [ background, setBackground ] = useState(constructBackground(backgrounds[0]));
+    return () => {
+      dbRef.remove();
 
-  const handleScroll = (e: React.UIEvent<HTMLElement>) => {
-    const { scrollTop } = e!.currentTarget;
-    const viewportHeight = window.innerHeight;
-
-    const screenNr = Math.floor(scrollTop / viewportHeight);
-
-    if (screenNr > 1) {
-      setBackground(constructBackground(backgrounds[2]));
-      return;
+      return void(null);
     }
-
-    const mixRatio = 1 - (scrollTop % viewportHeight) / viewportHeight;
-    const backgroundMix = getColorMix(backgrounds[screenNr], backgrounds[screenNr +1], mixRatio);
-
-    setBackground(constructBackground(backgroundMix));
-  }
+  }, []);
 
   return (
-    <Provider store={store}>
-      <Router>
-        <Nav />
-        <Switch>
-          <Route path="/">
-            <Background
-              style={{ background }}
-            >
-              <Scrollbars
-                onScroll={handleScroll}
-              >
-                <Dashboard/>
-              </Scrollbars>
-            </Background>
-          </Route>
-        </Switch>
-      </Router>
-    </Provider>
+    <Router>
+      <Nav />
+      <Switch>
+        <Route path="/">
+          <Background>
+            <Dashboard/>
+          </Background>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

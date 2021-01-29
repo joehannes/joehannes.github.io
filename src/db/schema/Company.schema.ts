@@ -2,7 +2,7 @@ import { normalize, RxJsonSchema } from 'rxdb';
 
 import { TPortfolioDoc } from '../model';
 
-const Company: RxJsonSchema<TPortfolioDoc["Company"]> = normalize({
+const Company: RxJsonSchema<TPortfolioDoc["company"]> = normalize({
   title: 'company',
   version: 0,
   description: 'employer or own company',
@@ -25,7 +25,7 @@ const Company: RxJsonSchema<TPortfolioDoc["Company"]> = normalize({
     },
     location: {
       ref: 'location',
-      type: 'number',
+      type: 'string',
     },
     icon: {
       type: 'object',
@@ -44,15 +44,8 @@ const Company: RxJsonSchema<TPortfolioDoc["Company"]> = normalize({
     projects: {
       type: 'array',
       items: {
-        type: 'object',
-        properties: {
-          title: {
-            type: 'string',
-          },
-          url: {
-            type: 'string',
-          },
-        },
+        ref: 'project',
+        type: 'string',
       },
     },
   },

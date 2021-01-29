@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import { workExperience } from '../features';
+import { work } from '../features';
 
 const rootReducer = combineReducers({
-  workExperience: workExperience.workExperienceReducer,
+  work: work.workReducer,
 });
 
 export default rootReducer;
