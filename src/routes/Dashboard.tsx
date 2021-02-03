@@ -5,7 +5,7 @@ import {
 
 import Welcome from '../pages/Welcome';
 import Motivation from '../pages/Motivation';
-import TechStack from '../pages/TechStack';
+// import TechStack from '../pages/TechStack';
 import WorkExperience from '../pages/WorkExperience';
 
 const Dashboard: FC = () => {

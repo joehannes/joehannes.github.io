@@ -78,7 +78,7 @@ function App() {
 
       return void(null);
     }
-  }, []);
+  }, [dispatch]);
 
   return (
     <Router>
