@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.82863d2a.chunk.css",
-    "main.js": "/static/js/main.3fb95db2.chunk.js",
-    "main.js.map": "/static/js/main.3fb95db2.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f3eb1d1d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f3eb1d1d.js.map",
+    "main.css": "/static/css/main.1f2779ab.chunk.css",
+    "main.js": "/static/js/main.5336ac8d.chunk.js",
+    "main.js.map": "/static/js/main.5336ac8d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.92deae3f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.92deae3f.js.map",
     "static/css/2.2aa38b9c.chunk.css": "/static/css/2.2aa38b9c.chunk.css",
-    "static/js/2.e8f28320.chunk.js": "/static/js/2.e8f28320.chunk.js",
-    "static/js/2.e8f28320.chunk.js.map": "/static/js/2.e8f28320.chunk.js.map",
-    "static/js/3.a9a2a4a3.chunk.js": "/static/js/3.a9a2a4a3.chunk.js",
-    "static/js/3.a9a2a4a3.chunk.js.map": "/static/js/3.a9a2a4a3.chunk.js.map",
+    "static/js/2.b8a20795.chunk.js": "/static/js/2.b8a20795.chunk.js",
+    "static/js/2.b8a20795.chunk.js.map": "/static/js/2.b8a20795.chunk.js.map",
+    "static/js/3.f8dd51cc.chunk.js": "/static/js/3.f8dd51cc.chunk.js",
+    "static/js/3.f8dd51cc.chunk.js.map": "/static/js/3.f8dd51cc.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.2aa38b9c.chunk.css.map": "/static/css/2.2aa38b9c.chunk.css.map",
-    "static/css/main.82863d2a.chunk.css.map": "/static/css/main.82863d2a.chunk.css.map",
-    "static/js/2.e8f28320.chunk.js.LICENSE.txt": "/static/js/2.e8f28320.chunk.js.LICENSE.txt",
+    "static/css/main.1f2779ab.chunk.css.map": "/static/css/main.1f2779ab.chunk.css.map",
+    "static/js/2.b8a20795.chunk.js.LICENSE.txt": "/static/js/2.b8a20795.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/static/media/outline-icons.ddae9b1b.woff",
     "static/media/elephant.e0ef6db1.mp3": "/static/media/elephant.e0ef6db1.mp3",
     "static/media/App.scss": "/static/media/offset.8448dd35.svg",
     "static/media/Motivation.module.scss": "/static/media/paper_filter.9ae4c19c.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.f3eb1d1d.js",
+    "static/js/runtime-main.92deae3f.js",
     "static/css/2.2aa38b9c.chunk.css",
-    "static/js/2.e8f28320.chunk.js",
-    "static/css/main.82863d2a.chunk.css",
-    "static/js/main.3fb95db2.chunk.js"
+    "static/js/2.b8a20795.chunk.js",
+    "static/css/main.1f2779ab.chunk.css",
+    "static/js/main.5336ac8d.chunk.js"
   ]
 }
