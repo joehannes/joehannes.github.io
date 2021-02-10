@@ -1,0 +1,24 @@
+{
+  "configurations": {
+    "launch": {
+      "adapter": "chrome",
+      "configuration": {
+        "request": "launch",
+        "runtimeExecutable": "/usr/bin/google-chrome-stable",
+        "runtimeArgs": [
+          "--remote-debugging-port=9222",
+          "."
+        ],
+        "url": "localhost:3000",
+        "webRoot": "${workspaceRoot}/public"
+      }
+    },
+    "attach": {
+      "type": "chrome",
+      "request": "attach",
+      "port": 9222,
+      "url": "localhost:3000",
+      "webRoot": "${workspaceRoot}/public"
+    }
+  }
+}
