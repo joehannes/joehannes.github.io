@@ -42,7 +42,7 @@ $partSize: 3em;
 	@for $p from 1 through $parts {
 		&:nth-of-type(#{$p}) {
 			animation-delay: $dur * random();
-			left: calc(max(0, 100% - #{$partSize}) * (#{$p} - 1)/#{$parts});
+			left: calc((100% - #{$partSize}) * (#{$p} - 1)/#{$parts});
 		}
 	}
 }

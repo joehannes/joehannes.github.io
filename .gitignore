@@ -29,3 +29,6 @@ tags
 #eslint-cache
 .eslintcache
 ./.eslintcache
+
+#env-file
+.env
