@@ -32,3 +32,7 @@ tags
 
 #env-file
 .env
+
+#nvim
+.undodir
+Session.vim
