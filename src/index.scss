@@ -1,5 +1,8 @@
 @use "./theme.config" as *;
-@use "semantic-ui-sass/semantic-ui.scss" as *;
+@use "fomantic-ui-sass/src/build.scss" as * with (
+  $image-path: "/../node_modules/fomantic-ui-sass/src/themes/default/assets/images",
+  $font-path: "/../node_modules/fomantic-ui-sass/src/themes/default/assets/fonts"
+);
 
 @import url('https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Fira+Code&display=swap&effect=fire-animation');
 

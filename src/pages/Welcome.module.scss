@@ -39,3 +39,11 @@
   filter: url(../assets/svg/fire.svg#fire_filter_id);
 }
 
+.githubcontrib {
+  &> div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

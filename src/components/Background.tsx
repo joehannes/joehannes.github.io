@@ -1,5 +1,5 @@
 import React, { FC, PropsWithChildren, useState } from 'react';
-import { Scrollbars } from 'react-custom-scrollbars';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 
 const Background: FC<PropsWithChildren<{}>> = ({ children }) => {
   const getColorMix = (color1: string, color2: string, ratio: number = 0.5) => {

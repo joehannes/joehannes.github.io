@@ -74,7 +74,7 @@ function App() {
     );
 
     return () => {
-      dbRef.remove();
+      dbRef?.remove();
 
       return void(null);
     }
