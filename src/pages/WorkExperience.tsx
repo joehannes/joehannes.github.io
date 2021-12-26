@@ -102,14 +102,16 @@ const WorkExperience: FC = () => {
             <br />
             <br />
             <h3 className="vertical-timeline-element-title">
-              {job.position.title} @{job.company.title}
+              {job.position.title} {"@" + job.company.title}
             </h3>
             <h4 className="vertical-timeline-element-subtitle">
-              {job.contract.contract} @
-              {job.remote
-                ? `${job.remote.city}/${job.remote.country}`
-                : `${job.company.location.city}/${job.company.location.country}`}
-              <br />#{job.description.function}
+              {job.contract.contract}
+              {"@" +
+                (job.remote
+                  ? `${job.remote.city}/${job.remote.country}`
+                  : `${job.company.location.city}/${job.company.location.country}`)}
+              <br />
+              {"#" + job.description.function}
             </h4>
             <Segment.Group>
               <Segment basic className={styles.label}>
