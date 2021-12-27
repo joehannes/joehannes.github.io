@@ -9,7 +9,7 @@ import trumpetSound from "../assets/audio/elephant.mp3";
 import "react-calendar-heatmap/dist/styles.css";
 
 const Welcome: FC = () => {
-  const [data, setData] = useState<HeatmapData>();
+  const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   let trumpHello = new Audio(trumpetSound);
 
