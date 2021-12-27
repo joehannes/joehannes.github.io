@@ -1,11 +1,12 @@
 import { FC, useState, useEffect } from "react";
 import { Image, Reveal, Segment } from "semantic-ui-react";
-import { Heatmap, HeatmapData } from "react-github-heatmap";
+import Heatmap from "react-calendar-heatmap";
 
 import Branding from "../components/Branding";
 
 import styles from "./Welcome.module.scss";
 import trumpetSound from "../assets/audio/elephant.mp3";
+import "react-calendar-heatmap/dist/styles.css";
 
 const Welcome: FC = () => {
   const [data, setData] = useState<HeatmapData>();
@@ -70,7 +71,7 @@ const Welcome: FC = () => {
         </Segment>
         {!isLoading && data && (
           <Segment basic textAlign="center" className={styles.githubcontrib}>
-            <Heatmap data={data} />
+            <Heatmap values={data} />
           </Segment>
         )}
       </Segment.Group>
