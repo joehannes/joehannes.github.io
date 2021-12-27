@@ -1,5 +1,3 @@
-import { FC, useState, useEffect } from "react";
-
 import { Image, Reveal, Segment } from "semantic-ui-react";
 import { Heatmap, HeatmapData } from "react-github-heatmap";
 
@@ -17,13 +15,12 @@ const Welcome: FC = () => {
     setIsLoading(true);
 
     try {
-      const jsonData = await fetch(
+      const response = await fetch(
         "https://shielded-savannah-53593.herokuapp.com"
       );
+      const jsonData = await response.json();
 
-      console.log(jsonData);
-
-      // setData(jsonData);
+      setData(jsonData);
     } catch (e) {
       console.log(e);
     } finally {
