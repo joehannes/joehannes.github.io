@@ -1,7 +1,7 @@
-import { FC } from "react";
+import { FC, useState, useEffect } from "react";
 
 import { Image, Reveal, Segment } from "semantic-ui-react";
-import { GithubContribution } from "react-github-contributions-component";
+import { Heatmap, HeatmapData } from "react-github-heatmap";
 
 import Branding from "../components/Branding";
 
@@ -9,7 +9,31 @@ import styles from "./Welcome.module.scss";
 import trumpetSound from "../assets/audio/elephant.mp3";
 
 const Welcome: FC = () => {
+  const [data, setData] = useState<HeatmapData>();
+  const [isLoading, setIsLoading] = useState(false);
   let trumpHello = new Audio(trumpetSound);
+
+  const fetchData = async () => {
+    setIsLoading(true);
+
+    try {
+      const jsonData = await fetch(
+        "https://shielded-savannah-53593.herokuapp.com"
+      );
+
+      console.log(jsonData);
+
+      // setData(jsonData);
+    } catch (e) {
+      console.log(e);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -31,6 +55,7 @@ const Welcome: FC = () => {
                 height="128"
                 muted
                 loop
+                autoPlay
               />
             </Reveal.Content>
           </Reveal>
@@ -45,9 +70,11 @@ const Welcome: FC = () => {
         >
           <h2>Frontend Developer: React/Typescript</h2>
         </Segment>
-        <Segment basic textAlign="center" className={styles.githubcontrib}>
-          <GithubContribution userName="joehannes" theme="jokerLight" />
-        </Segment>
+        {!isLoading && data && (
+          <Segment basic textAlign="center" className={styles.githubcontrib}>
+            <Heatmap data={data} />
+          </Segment>
+        )}
       </Segment.Group>
     </>
   );
