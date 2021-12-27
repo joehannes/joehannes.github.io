@@ -1,3 +1,4 @@
+import { FC, useState, useEffect } from "react";
 import { Image, Reveal, Segment } from "semantic-ui-react";
 import { Heatmap, HeatmapData } from "react-github-heatmap";
 
