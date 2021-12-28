@@ -9,7 +9,7 @@ import trumpetSound from "../assets/audio/elephant.mp3";
 import "react-calendar-heatmap/dist/styles.css";
 
 const Welcome: FC = () => {
-  const [data, setData] = useState<any[]>();
+  const [data, setData] = useState<{ date: string; count: number }[]>();
   const [isLoading, setIsLoading] = useState(false);
   let trumpHello = new Audio(trumpetSound);
 
@@ -34,7 +34,7 @@ const Welcome: FC = () => {
     }
   };
 
-  const transformData = (rawData: any[]): any[] =>
+  const transformData = (rawData: any[]): { date: string; count: number }[] =>
     rawData.flatMap((weekDataset: any) =>
       weekDataset.contributionDays.map((dayDataset: any) => ({
         date: dayDataset.date,
@@ -82,7 +82,16 @@ const Welcome: FC = () => {
           <h2>Frontend Developer: React/Typescript</h2>
         </Segment>
         <Segment basic textAlign="center" className={styles.githubcontrib}>
-          {isLoading || !data?.length ? <Loader /> : <Heatmap values={data} />}
+          {isLoading || !data?.length ? (
+            <Loader />
+          ) : (
+            <Heatmap
+              values={data}
+              classForValue={(value: { count: number; date: string }) =>
+                value.count === 0 ? "color-empty" : `color-scale-${value.count}`
+              }
+            />
+          )}
         </Segment>
       </Segment.Group>
     </>
