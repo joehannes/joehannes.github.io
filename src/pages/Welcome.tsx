@@ -1,5 +1,5 @@
 import { FC, useState, useEffect } from "react";
-import { Image, Reveal, Segment } from "semantic-ui-react";
+import { Image, Loader, Reveal, Segment } from "semantic-ui-react";
 import Heatmap from "react-calendar-heatmap";
 
 import Branding from "../components/Branding";
@@ -9,7 +9,7 @@ import trumpetSound from "../assets/audio/elephant.mp3";
 import "react-calendar-heatmap/dist/styles.css";
 
 const Welcome: FC = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<any[]>();
   const [isLoading, setIsLoading] = useState(false);
   let trumpHello = new Audio(trumpetSound);
 
@@ -22,13 +22,25 @@ const Welcome: FC = () => {
       );
       const jsonData = await response.json();
 
-      setData(jsonData);
+      setData(
+        transformData(
+          jsonData.user.contributionsCollection.contributionCalendar.weeks
+        )
+      );
     } catch (e) {
       console.log(e);
     } finally {
       setIsLoading(false);
     }
   };
+
+  const transformData = (rawData: any[]): any[] =>
+    rawData.flatMap((weekDataset: any) =>
+      weekDataset.contributionDays.map((dayDataset: any) => ({
+        date: dayDataset.date,
+        count: dayDataset.contributionCount,
+      }))
+    );
 
   useEffect(() => {
     fetchData();
@@ -69,11 +81,9 @@ const Welcome: FC = () => {
         >
           <h2>Frontend Developer: React/Typescript</h2>
         </Segment>
-        {!isLoading && data && (
-          <Segment basic textAlign="center" className={styles.githubcontrib}>
-            <Heatmap values={data} />
-          </Segment>
-        )}
+        <Segment basic textAlign="center" className={styles.githubcontrib}>
+          {isLoading || !data?.length ? <Loader /> : <Heatmap values={data} />}
+        </Segment>
       </Segment.Group>
     </>
   );
