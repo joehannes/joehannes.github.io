@@ -103,11 +103,12 @@ nav ~ div > div {
   height: auto !important;
 }
 
+.color-empty {
+  fill: rgba($color: cyan, $alpha: 0.5) !important;
+}
+
 @for $count from 1 through 4 {
   .color-scale-#{$count} {
     fill: rgba($color: magenta, $alpha: calc(#{$count}/4));
   }
-}
-.color-empty {
-  fill: rgba($color: cyan, $alpha: 0.21);
 }
