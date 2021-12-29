@@ -9,9 +9,6 @@ import trumpetSound from "../assets/audio/elephant.mp3";
 import "react-calendar-heatmap/dist/styles.css";
 
 const Welcome: FC = () => {
-  const color_scale = Array(5).map((_, i) =>
-    !i ? "color-empty" : styles[`color_scale_${i}`]
-  );
   const [data, setData] = useState<{ date: string; count: number }[]>();
   const [isLoading, setIsLoading] = useState(false);
   let trumpHello = new Audio(trumpetSound);
@@ -92,8 +89,11 @@ const Welcome: FC = () => {
               values={data}
               classForValue={(value: { count: number; date: string }) =>
                 !value?.count
-                  ? color_scale[0]
-                  : color_scale[Math.min(4, Math.ceil(Math.log2(value.count)))]
+                  ? "color-empty"
+                  : `color-scale-${Math.min(
+                      4,
+                      Math.ceil(Math.log2(value.count))
+                    )}`
               }
             />
           )}
