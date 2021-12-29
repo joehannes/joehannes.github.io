@@ -49,9 +49,9 @@
     justify-content: center;
     align-items: center;
   }
-  @for $count from 1 through 50 {
+  @for $count from 1 through 4 {
     .color-scale-#{$count} {
-      fill: rgba($color: magenta, $alpha: calc(#{$count}/50));
+      fill: rgba($color: magenta, $alpha: calc(#{$count}/4));
     }
   }
 }

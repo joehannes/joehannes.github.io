@@ -93,9 +93,7 @@ const Welcome: FC = () => {
               classForValue={(value: { count: number; date: string }) =>
                 !value?.count
                   ? color_scale[0]
-                  : color_scale[
-                      value.count < 4 ? 1 : Math.min(4, Math.log2(value.count))
-                    ]
+                  : color_scale[Math.min(4, Math.ceil(Math.log2(value.count)))]
               }
             />
           )}
