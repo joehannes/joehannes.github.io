@@ -38,9 +38,7 @@ const WorkExperience: FC = () => {
 
     const _workExperience = workExperience.map((w) => ({
       ...w,
-      technology: w.technology.map((t) =>
-        technology.find((_t) => t.includes(_t.id))
-      ),
+      technology: w.technology.map((t) => technology.find((_t) => t === _t.id)),
       position: position.find((p) => p.id === w.position),
       remote: location.find((l) => l.id === w.remote),
       contract: contractType.find((cT) => cT.id === w.contract),
