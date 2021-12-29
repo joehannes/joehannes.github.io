@@ -92,7 +92,7 @@ const Welcome: FC = () => {
                   ? "color-empty"
                   : `color-scale-${Math.min(
                       4,
-                      Math.ceil(Math.log2(value.count))
+                      value.count === 1 ? 1 : Math.floor(Math.log2(value.count))
                     )}`
               }
             />
