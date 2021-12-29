@@ -52,7 +52,7 @@
 
   @for $count from 0 through 50 {
     .color-scale-#{$count} {
-      color: rgba($color: magenta, $alpha: calc(#{$count}/50));
+      fill: rgba($color: magenta, $alpha: calc(#{$count}/50));
     }
   }
 }
