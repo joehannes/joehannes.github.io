@@ -90,7 +90,9 @@ const Welcome: FC = () => {
               classForValue={(value: { count: number; date: string }) =>
                 !value?.count
                   ? "color-empty"
-                  : `${styles.color_scale_}${value.count}`
+                  : `color-github-${
+                      value.count < 4 ? 1 : Math.min(4, Math.log2(value.count))
+                    }`
               }
             />
           )}
