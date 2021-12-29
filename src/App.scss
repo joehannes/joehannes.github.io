@@ -102,9 +102,12 @@ nav ~ div > div {
 #github-container .js-calendar-graph.calendar-graph {
   height: auto !important;
 }
+
 @for $count from 1 through 4 {
   .color-scale-#{$count} {
     fill: rgba($color: magenta, $alpha: calc(#{$count}/4));
   }
 }
-
+.color-empty {
+  fill: rgba($color: cyan, $alpha: 0.21);
+}
