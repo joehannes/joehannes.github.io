@@ -88,7 +88,7 @@ const Welcome: FC = () => {
             <Heatmap
               values={data}
               classForValue={(value: { count: number; date: string }) =>
-                value.count === 0 ? "color-empty" : `color-scale-${value.count}`
+                !value?.count ? "color-empty" : `color-scale-${value.count}`
               }
             />
           )}

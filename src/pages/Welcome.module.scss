@@ -40,10 +40,19 @@
 }
 
 .githubcontrib {
+  margin-left: 15vw;
+  margin-right: 15vw;
+
   &> div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  @for $count from 0 through 50 {
+    .color-scale-#{$count} {
+      color: rgba($color: magenta, $alpha: calc(#{$count}/50));
+    }
   }
 }
