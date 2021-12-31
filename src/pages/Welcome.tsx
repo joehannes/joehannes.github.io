@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from "react";
+import { FC, useState, useCallback, useEffect } from "react";
 import { Image, Loader, Reveal, Segment } from "semantic-ui-react";
 import Heatmap from "react-calendar-heatmap";
 
@@ -13,7 +13,15 @@ const Welcome: FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   let trumpHello = new Audio(trumpetSound);
 
-  const fetchData = async () => {
+  const transformData = (rawData: any[]): { date: string; count: number }[] =>
+    rawData.flatMap((weekDataset: any) =>
+      weekDataset.contributionDays.map((dayDataset: any) => ({
+        date: dayDataset.date,
+        count: dayDataset.contributionCount,
+      }))
+    );
+
+  const fetchData = useCallback(async () => {
     setIsLoading(true);
 
     try {
@@ -32,19 +40,11 @@ const Welcome: FC = () => {
     } finally {
       setIsLoading(false);
     }
-  };
-
-  const transformData = (rawData: any[]): { date: string; count: number }[] =>
-    rawData.flatMap((weekDataset: any) =>
-      weekDataset.contributionDays.map((dayDataset: any) => ({
-        date: dayDataset.date,
-        count: dayDataset.contributionCount,
-      }))
-    );
+  }, [setIsLoading]);
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
 
   return (
     <>
