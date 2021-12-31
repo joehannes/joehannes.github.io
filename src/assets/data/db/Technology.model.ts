@@ -197,6 +197,18 @@ const Technology = [
     from: new Date(2021, 5).getTime(),
     level: 4,
   },
+  {
+    id: "34",
+    title: "Styled Components",
+    from: new Date(2019, 1).getTime(),
+    level: 6,
+  },
+  {
+    id: "35",
+    title: "Next.js",
+    from: new Date(2021, 7).getTime(),
+    level: 5,
+  },
 ];
 
 export default Technology;
