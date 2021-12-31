@@ -84,8 +84,8 @@ const WorkExperience: FC = () => {
             iconStyle={{ ...job.style }}
             icon={
               <Icon
-                color={job.company.icon.color as any}
-                name={job.company.icon.id as any}
+                color={job.company.icon.color}
+                name={job.company.icon.id}
                 size="big"
                 className={styles.icon}
               />
@@ -93,7 +93,7 @@ const WorkExperience: FC = () => {
           >
             <Label
               as="a"
-              color={job.company.icon.color as any}
+              color={job.company.icon.color}
               ribbon={(i + 2) % 2 === 0 ? true : "right"}
               className={
                 (i + 2) % 2 === 0 ? styles.ribbon_left : styles.ribbon_right
@@ -117,7 +117,7 @@ const WorkExperience: FC = () => {
             </h4>
             <Segment.Group>
               <Segment basic className={styles.label}>
-                <Label color={job.company.icon.color as any} horizontal>
+                <Label color={job.company.icon.color} horizontal>
                   company size
                 </Label>
                 {Array(7)
@@ -126,13 +126,13 @@ const WorkExperience: FC = () => {
                   .join("")}
               </Segment>
               <Segment basic className={styles.label}>
-                <Label color={job.company.icon.color as any} horizontal>
+                <Label color={job.company.icon.color} horizontal>
                   method
                 </Label>
                 {job.description.method}
               </Segment>
               <Segment basic className={styles.label}>
-                <Label color={job.company.icon.color as any} horizontal>
+                <Label color={job.company.icon.color} horizontal>
                   focus
                 </Label>
                 {job.description.focus}
@@ -144,7 +144,7 @@ const WorkExperience: FC = () => {
                     tag
                     key={j}
                     className={styles.tag}
-                    color={job.company.icon.color as any}
+                    color={job.company.icon.color}
                   >
                     {tag.title}
                   </Label>
