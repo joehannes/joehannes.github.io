@@ -36,14 +36,18 @@ const WorkExperience: FC = () => {
       projects: c.projects.map((p) => project.find((_p) => p.includes(_p.id))),
     }));
 
-    const _workExperience = workExperience.map((w) => ({
-      ...w,
-      technology: w.technology.map((t) => technology.find((_t) => t === _t.id)),
-      position: position.find((p) => p.id === w.position),
-      remote: location.find((l) => l.id === w.remote),
-      contract: contractType.find((cT) => cT.id === w.contract),
-      company: _company.find((_c) => _c.id === w.company),
-    }));
+    const _workExperience = workExperience
+      .map((w) => ({
+        ...w,
+        technology: w.technology.map((t) =>
+          technology.find((_t) => t === _t.id)
+        ),
+        position: position.find((p) => p.id === w.position),
+        remote: location.find((l) => l.id === w.remote),
+        contract: contractType.find((cT) => cT.id === w.contract),
+        company: _company.find((_c) => _c.id === w.company),
+      }))
+      .sort((a, b) => b.date.to - a.date.to);
 
     return _workExperience;
   };
@@ -116,12 +120,10 @@ const WorkExperience: FC = () => {
                 <Label color={job.company.icon.color as any} horizontal>
                   company size
                 </Label>
-                <Rating
-                  icon="star"
-                  defaultRating={job.company.size}
-                  maxRating={7}
-                  disabled
-                />
+                {Array(7)
+                  .fill("★")
+                  .map((el, i) => (i >= job.company.size ? "☆" : el))
+                  .join("")}
               </Segment>
               <Segment basic className={styles.label}>
                 <Label color={job.company.icon.color as any} horizontal>
