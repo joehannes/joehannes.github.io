@@ -267,7 +267,7 @@ const WorkExperience = [
     },
     date: {
       from: new Date(2021, 2).getTime(),
-      to: new Date(2021, 12).getTime(),
+      to: new Date(2021, 12, 28).getTime(),
     },
     technology: ["1", "30", "2", "31", "32", "33", "7", "28"],
     position: "1",
@@ -288,7 +288,7 @@ const WorkExperience = [
     },
     date: {
       from: new Date(2021, 5).getTime(),
-      to: new Date(2021, 12).getTime(),
+      to: new Date(2021, 10).getTime(),
     },
     technology: ["1", "30", "3", "8", "7", "34", "35"],
     position: "1",
