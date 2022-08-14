@@ -9,42 +9,69 @@ import trumpetSound from "../assets/audio/elephant.mp3";
 import "react-calendar-heatmap/dist/styles.css";
 
 const Welcome: FC = () => {
-  const [data, setData] = useState<{ date: string; count: number }[]>();
+  const [data, setData] = useState<{ date: string; count: number }[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   let trumpHello = new Audio(trumpetSound);
 
-  const transformData = (rawData: any[]): { date: string; count: number }[] =>
-    rawData.flatMap((weekDataset: any) =>
-      weekDataset.contributionDays.map((dayDataset: any) => ({
-        date: dayDataset.date,
-        count: dayDataset.contributionCount,
-      }))
+  const transformData = (rawData: any[], provider: "gitlab" | "github"): { date: string; count: number; }[] => {
+    let data = null;
+
+    switch (provider) {
+      case "gitlab":
+        data = rawData.map((item: any) => ({
+          date: item[0],
+          count: item[1],
+        }));
+        break;
+      case "github":
+        data = rawData.flatMap((weekDataset: any) =>
+          weekDataset.contributionDays.map((dayDataset: any) => ({
+            date: dayDataset.date,
+            count: dayDataset.contributionCount,
+          }))
+        );
+        break;
+    }
+
+    return data;
+  }
+
+  const fetchGithub = useCallback(async () => {
+    const response = await fetch(
+      "https://shielded-savannah-53593.herokuapp.com"
     );
+    const jsonData = await response.json();
+
+    setData((prevData) => [...prevData, ...transformData(jsonData.user.contributionsCollection.contributionCalendar.weeks, "github")]);
+  }, []);
+
+  const fetchGitlab = useCallback(async () => {
+    const response = await fetch(
+      "https://gitlab.com/users/joehannes/calendar.json"
+    );
+    const jsonData = await response.json();
+
+    setData((prevData) => [...prevData, ...transformData(jsonData, "gitlab")]);
+  }, []);
 
   const fetchData = useCallback(async () => {
-    setIsLoading(true);
+    if (!isLoading) {
+      setIsLoading(true);
+    }
 
     try {
-      const response = await fetch(
-        "https://shielded-savannah-53593.herokuapp.com"
-      );
-      const jsonData = await response.json();
-
-      setData(
-        transformData(
-          jsonData.user.contributionsCollection.contributionCalendar.weeks
-        )
-      );
+      await fetchGithub();
+      await fetchGitlab();
     } catch (e) {
       console.log(e);
     } finally {
       setIsLoading(false);
     }
-  }, [setIsLoading]);
+  }, [isLoading]);
 
   useEffect(() => {
     fetchData();
-  }, [fetchData]);
+  }, []);
 
   return (
     <>
