@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+## hallo, hello, hola :-)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### @joehannes, Senior Frontender here ❤
 
-## Available Scripts
+![digital nomad](https://user-images.githubusercontent.com/63741107/185819396-26773d06-2886-4e3e-815f-6a59ab5dce2c.png)
 
-In the project directory, you can run:
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- status (21-Aug-2022): ready to inverview, looking for a new gig
+- availability: immediately
+- deets: [CV](https://bit.ly/jesushacker), [hello recruiter video](https://bit.ly/iamjoehannes-webdev), [phone](https://wa.me/+18294477471)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![coding activity github and gitlab](https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=activity&username=joehannes&width=600)
 
-### `yarn test`
+coding since 2000, **frontend** since **2010**, **React.js/TS** since **2017**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Javascript: +10 years
+* Typescript: +5 years
+* React.js: +5 years
 
-### `yarn build`
+![skill chart](https://cr-skills-chart-widget.azurewebsites.net/api/api?username=joehannes&width=600&height=300)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+I started grabbing myself **international experience** since 2010, in
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Oxford, UK
+* London, UK
+* Amsterdam, NL
+* Berlin, DE
+* Munich, DE
+* Vienna, AT
+* Linz, AT
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I'm **freelancing**, usually right off the US East coast in the Caribbean (**AST**, Santo Domingo), since **2016**.
+I understand the value of **detailed but concise communication**, plus a **pro-active** doer attitude.
 
-### `yarn eject`
+My latest projects:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* [Orbital](https://orbital.chat) - virutal team communication platform
+* [In House](https://in-house.com) - glassdoor clone feat. "stay-anonymous" patent
+* [United Signals](https://united-signals.com) - greenfield no-code platform for digitization
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+![profile summary](https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&username=joehannes&width=600)
