@@ -1,13 +1,13 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState } from 'react'
 import {
   Grid,
-  Segment,
-} from 'semantic-ui-react';
+  Segment
+} from 'semantic-ui-react'
 
-import styles from './Motivation.module.scss';
+import styles from './Motivation.module.scss'
 
 const Motivation: FC = () => {
-  let [hovered, setHovered] = useState(0);
+  const [hovered, setHovered] = useState(0)
 
   return (<>
     <Segment.Group className="style__border--none">
@@ -54,8 +54,8 @@ const Motivation: FC = () => {
               </Grid.Column>
               <Grid.Column
                 className={`${styles.newspaper__column} dashboard__subtitle ${hovered === 3 ? styles.active : ''} ${hovered !== 0 && hovered !== 3 ? styles.inactive : ''}`}
-                onMouseEnter={() =>setHovered(3)}
-                onMouseLeave={() =>setHovered(0)}
+                onMouseEnter={() => setHovered(3)}
+                onMouseLeave={() => setHovered(0)}
               ><h4>Relevant Experience</h4>
                 <p>
               I got about <span className="text--pronounced">3 years of experience in React and a bit more in Typescript</span>.
@@ -84,7 +84,7 @@ const Motivation: FC = () => {
       <Segment basic>
       </Segment>
     </Segment.Group>
-  </>);
+  </>)
 }
 
-export default Motivation;
+export default Motivation

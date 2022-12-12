@@ -1,4 +1,4 @@
-import * as winston from 'winston';
+import * as winston from 'winston'
 
 export default winston.createLogger({
   level: 'debug',
@@ -7,4 +7,4 @@ export default winston.createLogger({
   transports: [
     new winston.transports.Console({ format: winston.format.simple(), level: 'verbose' })
   ]
-});
+})

@@ -5,4 +5,4 @@ type TPosition = {
   coder: boolean,
 };
 
-export default TPosition;
+export default TPosition

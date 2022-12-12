@@ -7,4 +7,4 @@ type TProject = {
   greenfield: boolean,
 };
 
-export default TProject;
+export default TProject

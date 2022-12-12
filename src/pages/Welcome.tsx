@@ -8,12 +8,20 @@ import styles from "./Welcome.module.scss";
 import trumpetSound from "../assets/audio/elephant.mp3";
 import "react-calendar-heatmap/dist/styles.css";
 
+const API = {
+  GITHUB: "https://joehannes-codes.onrender.com",
+  GITLAB: "https://gitlab.com/users/joehannes/calendar.json",
+}
+
 const Welcome: FC = () => {
   const [data, setData] = useState<{ date: string; count: number }[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  let trumpHello = new Audio(trumpetSound);
+  const trumpHello = new Audio(trumpetSound);
 
-  const transformData = (rawData: any[], provider: "gitlab" | "github"): { date: string; count: number; }[] => {
+  const transformData = (
+    rawData: any[],
+    provider: "gitlab" | "github"
+  ): { date: string; count: number }[] => {
     let data = null;
 
     switch (provider) {
@@ -34,20 +42,29 @@ const Welcome: FC = () => {
     }
 
     return data;
-  }
+  };
 
   const fetchGithub = useCallback(async () => {
-    const response = await fetch(
-      "https://shielded-savannah-53593.herokuapp.com"
-    );
+    const response = await fetch(API.GITHUB);
     const jsonData = await response.json();
 
-    setData((prevData) => [...prevData, ...transformData(jsonData.user.contributionsCollection.contributionCalendar.weeks, "github")]);
+    setData((prevData) => [
+      ...prevData,
+      ...transformData(
+        jsonData.user.contributionsCollection.contributionCalendar.weeks,
+        "github"
+      ),
+    ]);
   }, []);
 
   const fetchGitlab = useCallback(async () => {
     const response = await fetch(
-      "https://gitlab.com/users/joehannes/calendar.json"
+      API.GITLAB,
+      {
+        headers: {
+          mode: "no-cors",
+        },
+      }
     );
     const jsonData = await response.json();
 
@@ -118,9 +135,9 @@ const Welcome: FC = () => {
                 !value?.count
                   ? "color-empty"
                   : `color-scale-${Math.min(
-                      4,
-                      value.count === 1 ? 1 : Math.floor(Math.log2(value.count))
-                    )}`
+                    4,
+                    value.count === 1 ? 1 : Math.floor(Math.log2(value.count))
+                  )}`
               }
             />
           )}

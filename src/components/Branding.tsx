@@ -1,8 +1,8 @@
-import { FC } from "react";
-import { animated, useSpring, useSpringRef, useChain } from "react-spring";
+import { FC } from 'react'
+import { animated, useSpring, useSpringRef, useChain } from 'react-spring'
 
-import styles from "./Branding.module.scss";
-import jsonData from "../assets/data/branding.json";
+import styles from './Branding.module.scss'
+import jsonData from '../assets/data/branding.json'
 
 interface IBrandingProps {
   style?: {
@@ -11,29 +11,29 @@ interface IBrandingProps {
 }
 
 const Branding: FC<IBrandingProps> = () => {
-  const strokeAniRef = useSpringRef();
-  const fillAniRef = useSpringRef();
-  const fireAniRef = useSpringRef();
+  const strokeAniRef = useSpringRef()
+  const fillAniRef = useSpringRef()
+  const fireAniRef = useSpringRef()
   const strokeAni = useSpring({
     x: 0,
     from: { x: -1620 },
     ref: strokeAniRef,
-    config: { duration: 3000 },
-  });
+    config: { duration: 3000 }
+  })
   const fillAni = useSpring({
     o: 0.3,
     from: { o: 0 },
     ref: fillAniRef,
-    config: { duration: 3000 },
-  });
+    config: { duration: 3000 }
+  })
   const fireAni = useSpring({
     o: 1,
     from: { o: 0 },
     ref: fireAniRef,
-    config: { duration: 3000 },
-  });
+    config: { duration: 3000 }
+  })
 
-  useChain([strokeAniRef, fillAniRef, fireAniRef]);
+  useChain([strokeAniRef, fillAniRef, fireAniRef])
 
   return (
     <>
@@ -59,7 +59,7 @@ const Branding: FC<IBrandingProps> = () => {
           ))}
       </animated.div>
     </>
-  );
-};
+  )
+}
 
-export default Branding;
+export default Branding

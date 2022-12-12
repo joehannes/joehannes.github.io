@@ -1,10 +1,10 @@
-import React, { FC } from "react";
-import { Container } from "semantic-ui-react";
+import React, { FC } from 'react'
+import { Container } from 'semantic-ui-react'
 
-import Welcome from "../pages/Welcome";
-import Motivation from "../pages/Motivation";
+import Welcome from '../pages/Welcome'
+import Motivation from '../pages/Motivation'
 // import TechStack from '../pages/TechStack';
-import WorkExperience from "../pages/WorkExperience";
+import WorkExperience from '../pages/WorkExperience'
 
 const Dashboard: FC = () => {
   return (
@@ -19,7 +19,7 @@ const Dashboard: FC = () => {
         <WorkExperience />
       </Container>
     </>
-  );
-};
+  )
+}
 
-export default Dashboard;
+export default Dashboard

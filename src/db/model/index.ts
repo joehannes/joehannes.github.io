@@ -1,12 +1,12 @@
-import { RxDocument, RxCollection, RxDatabase } from 'rxdb';
+import { RxDocument, RxCollection, RxDatabase } from 'rxdb'
 
-import TWorkExperience  from './WorkExperience.model';
-import TCompany from './Company.model';
-import TLocation from './Location.model';
-import TPosition from './Position.model';
-import TTechnology from './Technology.model';
-import TContractType from './ContractType.model';
-import TProject from './Project.model';
+import TWorkExperience from './WorkExperience.model'
+import TCompany from './Company.model'
+import TLocation from './Location.model'
+import TPosition from './Position.model'
+import TTechnology from './Technology.model'
+import TContractType from './ContractType.model'
+import TProject from './Project.model'
 
 export type {
   TWorkExperience,
@@ -15,8 +15,8 @@ export type {
   TPosition,
   TTechnology,
   TContractType,
-  TProject,
-};
+  TProject
+}
 
 export interface IPortfolioDoc {
   WorkExperience: RxDocument<TWorkExperience, {}>,
@@ -26,7 +26,7 @@ export interface IPortfolioDoc {
   Technology: RxDocument<TTechnology>,
   ContractType: RxDocument<TContractType>,
   Project: RxDocument<TProject>,
-};
+}
 
 export type TPortfolioDoc = {
   work_experience: RxDocument<TWorkExperience, {}>,

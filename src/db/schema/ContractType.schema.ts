@@ -1,8 +1,8 @@
-import { normalize, RxJsonSchema } from 'rxdb';
+import { normalize, RxJsonSchema } from 'rxdb'
 
-import { TPortfolioDoc } from '../model';
+import { TPortfolioDoc } from '../model'
 
-const ContractType: RxJsonSchema<TPortfolioDoc["contract_type"]> = normalize({
+const ContractType: RxJsonSchema<TPortfolioDoc['contract_type']> = normalize({
   title: 'contract_type',
   version: 0,
   description: 'permanent, contract, internship, owner',
@@ -10,12 +10,12 @@ const ContractType: RxJsonSchema<TPortfolioDoc["contract_type"]> = normalize({
   properties: {
     id: {
       type: 'string',
-      primary: true,
+      primary: true
     },
     contract: {
-      type: 'string',
-    },
+      type: 'string'
+    }
   }
-});
+})
 
-export default ContractType;
+export default ContractType

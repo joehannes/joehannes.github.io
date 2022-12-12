@@ -1,7 +1,7 @@
-import { work } from '../features';
+import { work } from '../features'
 
 const rootAction = {
-  work: work.workActions,
-};
+  work: work.workActions
+}
 
-export default rootAction;
+export default rootAction

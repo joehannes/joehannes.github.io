@@ -1,8 +1,8 @@
-import { normalize, RxJsonSchema } from 'rxdb';
+import { normalize, RxJsonSchema } from 'rxdb'
 
-import { TPortfolioDoc } from '../model';
+import { TPortfolioDoc } from '../model'
 
-const Company: RxJsonSchema<TPortfolioDoc["company"]> = normalize({
+const Company: RxJsonSchema<TPortfolioDoc['company']> = normalize({
   title: 'company',
   version: 0,
   description: 'employer or own company',
@@ -10,45 +10,45 @@ const Company: RxJsonSchema<TPortfolioDoc["company"]> = normalize({
   properties: {
     id: {
       type: 'string',
-      primary: true,
+      primary: true
     },
     title: {
-      type: 'string',
+      type: 'string'
     },
     industry: {
-      type: 'string',
+      type: 'string'
     },
     size: {
       type: 'number',
       minimum: 1,
-      maximum: 7,
+      maximum: 7
     },
     location: {
       ref: 'location',
-      type: 'string',
+      type: 'string'
     },
     icon: {
       type: 'object',
       properties: {
         id: {
-      type: 'string',
-    },
+          type: 'string'
+        },
         color: {
-      type: 'string',
-    },
-      },
+          type: 'string'
+        }
+      }
     },
     url: {
-      type: 'string',
+      type: 'string'
     },
     projects: {
       type: 'array',
       items: {
         ref: 'project',
-        type: 'string',
-      },
-    },
-  },
-});
+        type: 'string'
+      }
+    }
+  }
+})
 
-export default Company;
+export default Company

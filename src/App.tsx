@@ -1,37 +1,37 @@
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { RxChangeEvent } from "rxdb";
+import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { RxChangeEvent } from 'rxdb'
 
-import Background from "./components/Background";
-import Nav from "./components/Nav";
-import Dashboard from "./routes/Dashboard";
+import Background from './components/Background'
+import Nav from './components/Nav'
+import Dashboard from './routes/Dashboard'
 
-import DBSchema from "./db/schema";
-import * as DBModel from "./db/model";
-import * as WorkActions from "./features/work/actions";
-import { createDB, createSchema, populateDB } from "./db";
+import DBSchema from './db/schema'
+import * as DBModel from './db/model'
+import * as WorkActions from './features/work/actions'
+import { createDB, createSchema, populateDB } from './db'
 
-import workExperienceData from "./assets/data/db/WorkExperience.model";
-import companyData from "./assets/data/db/Company.model";
-import locationData from "./assets/data/db/Location.model";
-import positionData from "./assets/data/db/Position.model";
-import technologyData from "./assets/data/db/Technology.model";
-import contractTypeData from "./assets/data/db/ContractType.model";
-import projectData from "./assets/data/db/Project.model";
-import "./App.scss";
+import workExperienceData from './assets/data/db/WorkExperience.model'
+import companyData from './assets/data/db/Company.model'
+import locationData from './assets/data/db/Location.model'
+import positionData from './assets/data/db/Position.model'
+import technologyData from './assets/data/db/Technology.model'
+import contractTypeData from './assets/data/db/ContractType.model'
+import projectData from './assets/data/db/Project.model'
+import './App.scss'
 
-function App() {
-  const dispatch = useDispatch();
+function App () {
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    const dbP: Promise<DBModel.TPortfolioDatabase> = createDB();
-    let dbRef: DBModel.TPortfolioDatabase;
+    const dbP: Promise<DBModel.TPortfolioDatabase> = createDB()
+    let dbRef: DBModel.TPortfolioDatabase
 
     dbP.then(
       (db: DBModel.TPortfolioDatabase) => {
-        dbRef = db;
-        const schemaP: Promise<DBModel.TPortfolioCollection> = createSchema(db);
+        dbRef = db
+        const schemaP: Promise<DBModel.TPortfolioCollection> = createSchema(db)
 
         schemaP.then(
           (dbSchema: DBModel.TPortfolioCollection) => {
@@ -45,18 +45,18 @@ function App() {
                 position: WorkActions.updatePosition,
                 technology: WorkActions.updateTechnology,
                 contract_type: WorkActions.updateContractType,
-                project: WorkActions.updateProject,
-              };
+                project: WorkActions.updateProject
+              }
 
               dbSchema[schema].$.subscribe((changeEvent: RxChangeEvent) => {
-                const payload = changeEvent.rxDocument.toJSON();
+                const payload = changeEvent.rxDocument.toJSON()
 
                 dispatch(
                   actions[
                     changeEvent.collectionName as DBModel.TPortfolioCollectionKey
                   ](payload)
-                );
-              });
+                )
+              })
               populateDB(dbSchema, {
                 workExperienceData,
                 companyData,
@@ -64,26 +64,26 @@ function App() {
                 positionData,
                 technologyData,
                 contractTypeData,
-                projectData,
-              });
-            });
+                projectData
+              })
+            })
           },
           (err: any) => {
-            console.dir(err);
+            console.dir(err)
           }
-        );
+        )
       },
       ({ code }) => {
-        console.dir(code);
+        console.dir(code)
       }
-    );
+    )
 
     return () => {
-      dbRef?.remove();
+      dbRef?.remove()
 
-      return void null;
-    };
-  }, [dispatch]);
+      return void null
+    }
+  }, [dispatch])
 
   return (
     <Router>
@@ -96,7 +96,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App

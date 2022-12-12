@@ -12,4 +12,4 @@ export type TCompany = {
   projects: string[],
 }
 
-export default TCompany;
+export default TCompany

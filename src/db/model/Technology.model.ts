@@ -6,4 +6,4 @@ type TTechnology = {
   experience: number,
 }
 
-export default TTechnology;
+export default TTechnology

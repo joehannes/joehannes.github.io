@@ -1,30 +1,30 @@
-import { normalize, RxJsonSchema } from 'rxdb';
+import { normalize, RxJsonSchema } from 'rxdb'
 
-import { TPortfolioDoc } from '../model';
+import { TPortfolioDoc } from '../model'
 
-const Location: RxJsonSchema<TPortfolioDoc["location"]> = normalize({
+const Location: RxJsonSchema<TPortfolioDoc['location']> = normalize({
   title: 'remote_location',
   version: 0,
   description: 'remote city of digital nomadism',
   type: 'object',
   properties: {
     id: {
-     type: 'string',
-     primary: true,
+      type: 'string',
+      primary: true
     },
     city: {
-      type: 'string',
+      type: 'string'
     },
     country: {
-      type: 'string',
+      type: 'string'
     },
     region: {
-      type: 'string',
+      type: 'string'
     },
     timezone: {
-      type: 'string',
-    },
-  },
-});
+      type: 'string'
+    }
+  }
+})
 
-export default Location;
+export default Location

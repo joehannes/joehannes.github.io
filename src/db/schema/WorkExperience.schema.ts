@@ -1,8 +1,8 @@
-import { normalize, RxJsonSchema } from 'rxdb';
+import { normalize, RxJsonSchema } from 'rxdb'
 
-import { TPortfolioDoc } from '../model';
+import { TPortfolioDoc } from '../model'
 
-const WorkExperience: RxJsonSchema<TPortfolioDoc["work_experience"]> = normalize({
+const WorkExperience: RxJsonSchema<TPortfolioDoc['work_experience']> = normalize({
   title: 'work_experience',
   version: 0,
   description: 'all relevant job/project specifics',
@@ -10,71 +10,71 @@ const WorkExperience: RxJsonSchema<TPortfolioDoc["work_experience"]> = normalize
   properties: {
     id: {
       type: 'string',
-      primary: true,
+      primary: true
     },
     style: {
       type: 'object',
       properties: {
         background: {
-          type: 'string',
+          type: 'string'
         },
         color: {
-          type: 'string',
-        },
-      },
+          type: 'string'
+        }
+      }
     },
     date: {
       type: 'object',
       properties: {
         from: {
-          type: 'number',
+          type: 'number'
         },
         to: {
-          type: 'number',
-        },
-      },
+          type: 'number'
+        }
+      }
     },
     technology: {
       ref: 'technology',
       type: 'array',
       items: {
-        type: 'string',
-      },
+        type: 'string'
+      }
     },
     position: {
       ref: 'position',
-      type: 'string',
+      type: 'string'
     },
     remote: {
       ref: 'location',
-      type: 'string',
+      type: 'string'
     },
     contract: {
       ref: 'contract_type',
-      type: 'string',
+      type: 'string'
     },
     company: {
       ref: 'company',
-      type: 'string',
+      type: 'string'
     },
     description: {
       type: 'object',
       properties: {
         function: {
-          type: 'string',
+          type: 'string'
         },
         teamsize: {
-          type: 'string',
+          type: 'string'
         },
         method: {
-          type: 'string',
+          type: 'string'
         },
         focus: {
-          type: 'string',
-        },
-      },
-    },
-  },
-});
+          type: 'string'
+        }
+      }
+    }
+  }
+})
 
-export default WorkExperience;
+export default WorkExperience

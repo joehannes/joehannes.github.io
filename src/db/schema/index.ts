@@ -1,23 +1,23 @@
-import { RxJsonSchema } from 'rxdb';
+import { RxJsonSchema } from 'rxdb'
 
-import { TPortfolioDoc } from '../model';
+import { TPortfolioDoc } from '../model'
 
-import WorkExperience from './WorkExperience.schema';
-import Company from './Company.schema';
-import Location from './Location.schema';
-import Position from './Position.schema';
-import Technology from './Technology.schema';
-import ContractType from './ContractType.schema';
-import Project from './Project.schema';
+import WorkExperience from './WorkExperience.schema'
+import Company from './Company.schema'
+import Location from './Location.schema'
+import Position from './Position.schema'
+import Technology from './Technology.schema'
+import ContractType from './ContractType.schema'
+import Project from './Project.schema'
 
 export type TSchema = {
-  WorkExperience: RxJsonSchema<TPortfolioDoc["work_experience"]>,
-  Company: RxJsonSchema<TPortfolioDoc["company"]>,
-  Location: RxJsonSchema<TPortfolioDoc["location"]>,
-  Position: RxJsonSchema<TPortfolioDoc["position"]>,
-  Technology: RxJsonSchema<TPortfolioDoc["technology"]>,
-  ContractType: RxJsonSchema<TPortfolioDoc["contract_type"]>,
-  Project: RxJsonSchema<TPortfolioDoc["project"]>,
+  WorkExperience: RxJsonSchema<TPortfolioDoc['work_experience']>,
+  Company: RxJsonSchema<TPortfolioDoc['company']>,
+  Location: RxJsonSchema<TPortfolioDoc['location']>,
+  Position: RxJsonSchema<TPortfolioDoc['position']>,
+  Technology: RxJsonSchema<TPortfolioDoc['technology']>,
+  ContractType: RxJsonSchema<TPortfolioDoc['contract_type']>,
+  Project: RxJsonSchema<TPortfolioDoc['project']>,
 };
 
 const PortfolioSchema: { [specificSchema: string]: {
@@ -31,7 +31,7 @@ const PortfolioSchema: { [specificSchema: string]: {
   position: { schema: Position },
   technology: { schema: Technology },
   contract_type: { schema: ContractType },
-  project: { schema: Project },
-};
+  project: { schema: Project }
+}
 
-export default PortfolioSchema;
+export default PortfolioSchema

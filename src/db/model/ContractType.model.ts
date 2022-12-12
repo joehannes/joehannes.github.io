@@ -3,4 +3,4 @@ type TContractType = {
   contract: string,
 }
 
-export default TContractType;
+export default TContractType

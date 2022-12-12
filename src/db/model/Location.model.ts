@@ -6,4 +6,4 @@ type TLocation = {
   timezone: string,
 }
 
-export default TLocation;
+export default TLocation

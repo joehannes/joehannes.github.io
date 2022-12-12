@@ -1,8 +1,8 @@
-import { normalize, RxJsonSchema } from 'rxdb';
+import { normalize, RxJsonSchema } from 'rxdb'
 
-import { TPortfolioDoc } from '../model';
+import { TPortfolioDoc } from '../model'
 
-const Position: RxJsonSchema<TPortfolioDoc["position"]> = normalize({
+const Position: RxJsonSchema<TPortfolioDoc['position']> = normalize({
   title: 'carreer_level_title',
   version: 0,
   description: 'from hackster to CTO',
@@ -10,18 +10,18 @@ const Position: RxJsonSchema<TPortfolioDoc["position"]> = normalize({
   properties: {
     id: {
       type: 'string',
-      primary: true,
+      primary: true
     },
     title: {
-      type: 'string',
+      type: 'string'
     },
     manager: {
-      type: 'boolean',
+      type: 'boolean'
     },
     coder: {
-      type: 'boolean',
-    },
-  },
-});
+      type: 'boolean'
+    }
+  }
+})
 
-export default Position;
+export default Position

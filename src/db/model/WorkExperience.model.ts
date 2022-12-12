@@ -21,4 +21,4 @@ type TWorkExperience = {
   },
 };
 
-export default TWorkExperience;
+export default TWorkExperience

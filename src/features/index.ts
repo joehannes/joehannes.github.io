@@ -1,1 +1,1 @@
-export * as work from './work';
+export * as work from './work'

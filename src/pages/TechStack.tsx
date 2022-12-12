@@ -1,11 +1,11 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState } from 'react'
 
-import styles from './TechStack.module.scss';
+import styles from './TechStack.module.scss'
 
 const TechStack: FC = () => {
   return (<>
 
-  </>);
+  </>)
 }
 
-export default TechStack;
+export default TechStack
