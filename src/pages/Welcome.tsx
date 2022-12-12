@@ -55,7 +55,7 @@ const Welcome: FC = () => {
         "github"
       ),
     ]);
-  }, []);
+  }, [API]);
 
   const fetchGitlab = useCallback(async () => {
     const response = await fetch(
@@ -69,7 +69,7 @@ const Welcome: FC = () => {
     const jsonData = await response.json();
 
     setData((prevData) => [...prevData, ...transformData(jsonData, "gitlab")]);
-  }, []);
+  }, [API]);
 
   const fetchData = useCallback(async () => {
     if (!isLoading) {
