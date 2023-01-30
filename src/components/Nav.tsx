@@ -28,7 +28,7 @@ const Nav: FC = () => {
   }
   return (
     <nav className={styles.position}>
-      {jsonData.map((d, i) => (
+      {jsonData.map((d, i) => d.href && (
         <AniButton
           key={i}
           as="a"
