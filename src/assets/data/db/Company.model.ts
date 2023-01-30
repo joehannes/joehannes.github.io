@@ -178,6 +178,19 @@ const Company = [
     },
     url: 'https://in-house.com',
     projects: []
+  },
+  {
+    id: '15',
+    title: 'Orbital Chat Ltd.',
+    industry: 'Virtual Communication',
+    size: 1,
+    location: '9',
+    icon: {
+      id: 'chat',
+      color: 'pink'
+    },
+    url: 'https://orbital.chat',
+    projects: []
   }
 ]
 

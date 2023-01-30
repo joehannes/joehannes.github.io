@@ -29,15 +29,15 @@ const Welcome: FC = () => {
         data = rawData.map((item: any) => ({
           date: item[0],
           count: item[1],
-        }));
+        })) || [];
         break;
       case "github":
         data = rawData.flatMap((weekDataset: any) =>
-          weekDataset.contributionDays.map((dayDataset: any) => ({
+          weekDataset?.contributionDays?.map((dayDataset: any) => ({
             date: dayDataset.date,
             count: dayDataset.contributionCount,
           }))
-        );
+        ) || [];
         break;
     }
 
@@ -51,7 +51,7 @@ const Welcome: FC = () => {
     setData((prevData) => [
       ...prevData,
       ...transformData(
-        jsonData.user.contributionsCollection.contributionCalendar.weeks,
+        jsonData?.user?.contributionsCollection?.contributionCalendar?.weeks ?? [],
         "github"
       ),
     ]);
@@ -60,15 +60,10 @@ const Welcome: FC = () => {
   const fetchGitlab = useCallback(async () => {
     const response = await fetch(
       API.GITLAB,
-      {
-        headers: {
-          mode: "no-cors",
-        },
-      }
     );
     const jsonData = await response.json();
 
-    setData((prevData) => [...prevData, ...transformData(jsonData, "gitlab")]);
+    setData((prevData) => [...prevData, ...transformData(jsonData || [], "gitlab")]);
   }, [API]);
 
   const fetchData = useCallback(async () => {
@@ -78,9 +73,9 @@ const Welcome: FC = () => {
 
     try {
       await fetchGithub();
-      await fetchGitlab();
+      // await fetchGitlab();
     } catch (e) {
-      console.log(e);
+      console.warn(e);
     } finally {
       setIsLoading(false);
     }

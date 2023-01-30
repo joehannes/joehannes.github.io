@@ -208,6 +208,12 @@ const Technology = [
     title: 'Next.js',
     from: new Date(2021, 7).getTime(),
     level: 5
+  },
+  {
+    id: '36',
+    title: 'Chakra-UI',
+    from: new Date(2022, 2).getTime(),
+    level: 7
   }
 ]
 

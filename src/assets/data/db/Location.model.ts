@@ -46,6 +46,12 @@ const Location = [{
   country: 'Dominican Republic',
   region: 'Caribbean',
   timezone: 'UTC-4'
+}, {
+  id: '9',
+  city: 'La Vega',
+  country: 'Dominican Republic',
+  region: 'Caribbean',
+  timezone: 'UTC-4'
 }]
 
 export default Location

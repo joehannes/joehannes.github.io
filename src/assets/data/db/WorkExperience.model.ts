@@ -301,6 +301,28 @@ const WorkExperience = [
       focus:
         'MVP; go-live; deadline; management; mentoring; hand-on; code reviews;'
     }
+  },
+  {
+    id: '15',
+    style: {
+      background: 'purple',
+      color: '#FFFFFF'
+    },
+    date: {
+      from: new Date(2022, 2).getTime(),
+      to: new Date(2022, 11).getTime()
+    },
+    technology: ['1', '2', '3', '7', '35', '36'],
+    position: '1',
+    contract: '1',
+    company: '15',
+    description: {
+      function: 'brownfield; virtual communication; audio-zones;',
+      size: 'small sized business; start-up; niche-product',
+      method: 'agile',
+      focus:
+        'maintenance; feature enhancements; testing;',
+    }
   }
 ]
 
